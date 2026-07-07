@@ -105,6 +105,10 @@
     </div>
 
 <script>
+    // Hàm đổi màu nền Dark Mode
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
     // Hàm đổi hiệu ứng nút khi click
     function moTab(tenLop) {
         document.querySelectorAll('.btn-tab').forEach(btn => btn.classList.remove('active-tab'));
