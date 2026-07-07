@@ -1,12 +1,156 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Trang Web Của Tớ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao Diện Học Tập cùng Khánh</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/188/188333.png">
+    <style>
+        /* --- BỘ MÀU SẮC CHỦ ĐẠO (Tone xanh thiên nhiên từ EzMath) --- */
+        :root {
+            --primary: #1b4332;
+            --secondary: #40916c;
+            --light: #d8f3dc;
+            --bg-gradient: linear-gradient(135deg, #d8f3dc 0%, #b7e4c7 100%);
+            --accent: #ff9f1c;
+        }
+
+        /* --- CẤU HÌNH NỀN VÀ CHUYỂN ĐỘNG MƯỢT MÀ --- */
+        * { 
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; 
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            padding: 20px; 
+            background: var(--bg-gradient); 
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- KHUNG CHỨA TRUNG TÂM --- */
+        .container { 
+            width: 95%;
+            max-width: 1000px; 
+            background: rgba(255, 255, 255, 0.95); 
+            padding: 40px; 
+            border-radius: 30px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1); 
+            margin-top: 40px;
+        }
+
+        /* --- TIÊU ĐỀ HOA LÁ --- */
+        h1 { 
+            text-align: center; 
+            color: var(--primary); 
+            font-size: 32px; 
+            margin-bottom: 10px; 
+            letter-spacing: 1px; 
+        }
+        
+        .sub-title {
+            text-align: center;
+            color: var(--secondary);
+            font-size: 16px;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        /* --- BỘ NÚT CHỌN KHỐI LỚP (TABS) --- */
+        .tabs-khoi { 
+            display: flex; 
+            justify-content: center; 
+            gap: 15px; 
+            margin-bottom: 15px; 
+        }
+
+        button { 
+            padding: 15px 35px; 
+            cursor: pointer; 
+            background: linear-gradient(45deg, #2d6a4f, #52b788); 
+            color: white; 
+            border: none; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            font-size: 16px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        button:active { 
+            transform: scale(0.95); 
+        }
+
+        /* Màu cam rực rỡ khi nút được kích hoạt */
+        button.active-tab { 
+            background: linear-gradient(45deg, #ff9f1c, #f77f00); 
+            box-shadow: 0 5px 15px rgba(247,127,0,0.4); 
+        }
+
+        /* --- NÚT ĐỔI GIAO DIỆN (DARK MODE) CO ĐỊNH GÓC TRÁI --- */
+        .theme-switch { 
+            position: fixed; 
+            top: 20px; 
+            left: 20px; 
+            z-index: 9999; 
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            background: var(--primary); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            cursor: pointer; 
+            font-size: 24px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+        }
+
+        /* --- ĐỊNH DẠNG KHI BẬT DARK MODE --- */
+        body.dark-mode { 
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important; 
+        }
+        body.dark-mode .container { 
+            background: #252525 !important; 
+            color: #e0e0e0 !important; 
+            border-color: #40916c; 
+        }
+        body.dark-mode h1 { 
+            color: #e0e0e0 !important; 
+        }
+        body.dark-mode .sub-title {
+            color: #a3b899;
+        }
+    </style>
 </head>
 <body>
-    <h1>Chào mừng đến với trang web của tớ!</h1>
-    <p>Trang web này được lưu trữ miễn phí trên GitHub Pages.</p>
+
+    <div class="theme-switch" onclick="toggleDarkMode()" title="Đổi màu nền">🌓</div>
+
+    <div class="container">
+        <h1>🌿 CÂY KIẾN THỨC HỌC TẬP 🌿</h1>
+        <div class="sub-title">Hệ thống bài học thông minh cùng Khánh ✨</div>
+        
+        <div class="tabs-khoi">
+            <button class="btn-tab active-tab" id="tab-lop10" onclick="moTab('lop10')">Khối Lớp 10</button>
+            <button class="btn-tab" id="tab-lop11" onclick="moTab('lop11')">Khối Lớp 11</button>
+            <button class="btn-tab" id="tab-lop12" onclick="moTab('lop12')">Khối Lớp 12</button>
+        </div>
+    </div>
+
+<script>
+    // Hàm đổi màu nền Dark Mode
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+
+    // Hàm đổi hiệu ứng nút khi click
+    function moTab(tenLop) {
+        document.querySelectorAll('.btn-tab').forEach(btn => btn.classList.remove('active-tab'));
+        document.getElementById('tab-' + tenLop).classList.add('active-tab');
+    }
+</script>
 </body>
 </html>
