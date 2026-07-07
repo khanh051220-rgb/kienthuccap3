@@ -6,7 +6,7 @@
     <title>Giao Diện Học Tập cùng Khánh</title>
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/188/188333.png">
     <style>
-        /* --- BỘ MÀU SẮC CHỦ ĐẠO (Tone xanh thiên nhiên từ EzMath) --- */
+        /* --- BỘ MÀU SẮC CHỦ ĐẠO --- */
         :root {
             --primary: #1b4332;
             --secondary: #40916c;
@@ -15,7 +15,7 @@
             --accent: #ff9f1c;
         }
 
-        /* --- CẤU HÌNH NỀN VÀ CHUYỂN ĐỘNG MƯỢT MÀ --- */
+        /* --- CẤU HÌNH NỀN VÀ CHUYỂN ĐỘNG --- */
         * { 
             box-sizing: border-box;
             transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; 
@@ -24,7 +24,7 @@
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             padding: 20px; 
-            background: var(--bg-gradient);
+            background: var(--bg-gradient); 
             min-height: 100vh;
             margin: 0;
             display: flex;
@@ -32,7 +32,6 @@
             align-items: center;
         }
 
-        /* --- KHUNG CHỨA TRUNG TÂM --- */
         .container { 
             width: 95%;
             max-width: 1000px; 
@@ -43,87 +42,59 @@
             margin-top: 40px;
         }
 
-        /* --- TIÊU ĐỀ HOA LÁ --- */
         h1 { 
-            text-align: center; 
-            color: var(--primary); 
-            font-size: 32px; 
-            margin-bottom: 10px; 
-            letter-spacing: 1px; 
+            text-align: center; color: var(--primary); font-size: 32px; 
+            margin-bottom: 10px; letter-spacing: 1px; 
         }
         
         .sub-title {
-            text-align: center;
-            color: var(--secondary);
-            font-size: 16px;
-            margin-bottom: 30px;
-            font-style: italic;
+            text-align: center; color: var(--secondary); font-size: 16px;
+            margin-bottom: 30px; font-style: italic;
         }
 
-        /* --- BỘ NÚT CHỌN KHỐI LỚP (TABS) --- */
         .tabs-khoi { 
-            display: flex; 
-            justify-content: center; 
-            gap: 15px; 
-            margin-bottom: 30px; 
+            display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; 
         }
 
         .btn-tab { 
-            padding: 15px 35px; 
-            cursor: pointer; 
+            padding: 15px 35px; cursor: pointer; 
             background: linear-gradient(45deg, #2d6a4f, #52b788); 
-            color: white; 
-            border: none; 
-            border-radius: 50px; 
-            font-weight: bold; 
-            font-size: 16px; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            color: white; border: none; border-radius: 50px; 
+            font-weight: bold; font-size: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
-        .btn-tab:active { 
-            transform: scale(0.95); 
-        }
-
-        /* Màu cam rực rỡ khi nút khối lớp được kích hoạt */
+        .btn-tab:active { transform: scale(0.95); }
         .btn-tab.active-tab { 
             background: linear-gradient(45deg, #ff9f1c, #f77f00); 
             box-shadow: 0 5px 15px rgba(247,127,0,0.4); 
         }
 
-        /* --- KHU VỰC CHỨA CÁC NÚT MÔN HỌC --- */
         .vung-mon-hoc {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-            padding: 20px;
-            background: #f7fdf9;
-            border-radius: 20px;
-            border: 1px dashed var(--secondary);
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 15px; margin-top: 20px; padding: 20px;
+            background: #f7fdf9; border-radius: 20px; border: 1px dashed var(--secondary);
         }
 
         .btn-mon {
-            padding: 15px;
-            cursor: pointer;
-            background: white;
-            color: var(--primary);
-            border: 2px solid #b7e4c7;
-            border-radius: 15px;
-            font-weight: bold;
-            font-size: 15px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            padding: 15px; cursor: pointer; background: white;
+            color: var(--primary); border: 2px solid #b7e4c7;
+            border-radius: 15px; font-weight: bold; font-size: 15px;
+            text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
 
-        .btn-mon:hover {
-            background: var(--light);
-            border-color: var(--secondary);
-            transform: translateY(-2px);
-        }
+        .btn-mon:hover { background: var(--light); border-color: var(--secondary); transform: translateY(-2px); }
+        .btn-mon:active { transform: translateY(0); }
 
-        .btn-mon:active {
-            transform: translateY(0);
-        }
+        /* --- CSS CHO CÁC KHỐI BÀI HỌC BÊN TRONG POPUP --- */
+        .khoi-bai-hoc { margin-bottom: 30px; margin-left: 10px; }
+        .khoi-bai-hoc h4 { color: #2d6a4f; font-size: 18px; margin-bottom: 10px; }
+        .hop-cong-thuc { background: #e8f5e9; padding: 15px; border-left: 5px solid #40916c; border-radius: 8px; margin: 15px 0; }
+        .hop-loi-giai { background: #f8f9fa; padding: 12px; border-radius: 8px; font-style: italic; color: #555; }
+        .khung-link-video { margin-top: 15px; text-align: right; }
+        .btn-video { display: inline-block; background: #e63946; color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; }
+        .hop-lien-ket-mo-rong { background: #fff3cd; padding: 10px; border-radius: 8px; margin-top: 15px; font-size: 14px; color: #856404; border: 1px dashed #ffe8a1;}
+        .hop-lien-ket-mo-rong a { color: #0056b3; font-weight: bold; text-decoration: none; }
+        .hop-lien-ket-mo-rong a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -140,7 +111,7 @@
 
         <div id="vung-lop10" class="vung-lop-content">
             <div class="vung-mon-hoc">
-                <div class="btn-mon">📐 Toán Lớp 10</div>
+                <div class="btn-mon" onclick="moPopup('popup-toan10')">📐 Toán Lớp 10</div>
                 <div class="btn-mon">📚 Ngữ Văn 10</div>
                 <div class="btn-mon">🇬🇧 Tiếng Anh 10</div>
                 <div class="btn-mon">⏳ Lịch Sử 10</div>
@@ -155,7 +126,7 @@
 
         <div id="vung-lop11" class="vung-lop-content" style="display: none;">
             <div class="vung-mon-hoc">
-                <div class="btn-mon">📐 Toán Lớp 11</div>
+                <div class="btn-mon" onclick="moPopup('popup-toan11')">📐 Toán Lớp 11</div>
                 <div class="btn-mon">📚 Ngữ Văn 11</div>
                 <div class="btn-mon">🇬🇧 Tiếng Anh 11</div>
                 <div class="btn-mon">⏳ Lịch Sử 11</div>
@@ -170,7 +141,7 @@
 
         <div id="vung-lop12" class="vung-lop-content" style="display: none;">
             <div class="vung-mon-hoc">
-                <div class="btn-mon">📐 Toán Lớp 12</div>
+                <div class="btn-mon" onclick="moPopup('popup-toan12')">📐 Toán Lớp 12</div>
                 <div class="btn-mon">📚 Ngữ Văn 12</div>
                 <div class="btn-mon">🇬🇧 Tiếng Anh 12</div>
                 <div class="btn-mon">⏳ Lịch Sử 12</div>
@@ -184,18 +155,112 @@
         </div>
     </div>
 
+
+    <div id="popup-toan10" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.5); display: none; justify-content: center; align-items: center; z-index: 9999;">
+        <div style="background: white; width: 85%; max-width: 900px; height: 80vh; border-radius: 25px; border: 3px solid #40916c; padding: 30px; display: flex; flex-direction: column; position: relative; box-shadow: 0 15px 40px rgba(0,0,0,0.2);">
+            <button onclick="dongPopup('popup-toan10')" style="position: absolute; top: 15px; right: 15px; background: #ff4d4d; color: white; border: none; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; font-weight: bold; font-size: 16px;">✖</button>
+            <h2 style="color: #1b4332; margin-top: 0; text-align: center; border-bottom: 2px dashed #40916c; padding-bottom: 15px;">📐 TOÁN HỌC – KHỐI LỚP 10</h2>
+            
+            <div style="flex: 1; overflow-y: auto; padding-right: 15px; margin-top: 10px;">
+                <h3 style="color: #ff9f1c; background: #f7fdf9; padding: 10px; border-radius: 10px;">CHƯƠNG I. MỆNH ĐỀ VÀ TẬP HỢP</h3>
+
+                <div class="khoi-bai-hoc">
+                    <h4>Bài 1. Mệnh đề</h4>
+                    <p>📌 <b>Khái niệm:</b> Mệnh đề toán học là một câu khẳng định có tính đúng hoặc sai rõ ràng. Một mệnh đề không thể vừa đúng vừa sai.</p>
+                    
+                    <div class="hop-cong-thuc">
+                        💡 <b>Mệnh đề phủ định:</b> Phủ định của mệnh đề P là mệnh đề P̅. Nếu P đúng thì P̅ sai, và ngược lại.
+                    </div>
+
+                    <p>📝 <b>Ví dụ mẫu:</b> Phủ định của mệnh đề "P: Số 5 là số chẵn" là gì? Tính đúng sai?</p>
+                    <div class="hop-loi-giai">
+                        👉 <b>Lời giải:</b> Mệnh đề phủ định là "P̅: Số 5 không phải là số chẵn" (hoặc Số 5 là số lẻ). Mệnh đề P sai, còn mệnh đề P̅ là mệnh đề đúng.
+                    </div>
+
+                    <div class="khung-link-video">
+                        <a href="#" target="_blank" class="btn-video">📺 Xem Video Bài Giảng</a>
+                    </div>
+
+                    <div class="hop-lien-ket-mo-rong">
+                        🔗 <b>Tài liệu bổ trợ:</b> 
+                        <a href="#" target="_blank">📄 Tải File Bài Tập Tự Luyện</a> | 
+                        <a href="#" target="_blank">🌐 Đọc Lý Thuyết Chuyên Sâu</a>
+                    </div>
+                </div>
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+                
+                </div>
+        </div>
+    </div>
+
+
+    <div id="popup-toan11" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.5); display: none; justify-content: center; align-items: center; z-index: 9999;">
+        <div style="background: white; width: 85%; max-width: 900px; height: 80vh; border-radius: 25px; border: 3px solid #40916c; padding: 30px; display: flex; flex-direction: column; position: relative; box-shadow: 0 15px 40px rgba(0,0,0,0.2);">
+            <button onclick="dongPopup('popup-toan11')" style="position: absolute; top: 15px; right: 15px; background: #ff4d4d; color: white; border: none; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; font-weight: bold; font-size: 16px;">✖</button>
+            <h2 style="color: #1b4332; margin-top: 0; text-align: center; border-bottom: 2px dashed #40916c; padding-bottom: 15px;">📐 TOÁN HỌC – KHỐI LỚP 11</h2>
+            
+            <div style="flex: 1; overflow-y: auto; padding-right: 15px; margin-top: 10px;">
+                <h3 style="color: #ff9f1c; background: #f7fdf9; padding: 10px; border-radius: 10px;">CHƯƠNG I. (Khánh tự điền)</h3>
+
+                <div class="khoi-bai-hoc">
+                    <h4>Bài 1. [Tên bài học]</h4>
+                    <p>📌 <b>Khái niệm:</b> [Điền khái niệm vào đây]</p>
+                    <div class="hop-cong-thuc">💡 <b>Công thức/Định lý:</b> [Điền công thức vào đây]</div>
+                    <p>📝 <b>Ví dụ mẫu:</b> [Điền đề bài ví dụ]</p>
+                    <div class="hop-loi-giai">👉 <b>Lời giải:</b> [Điền lời giải chi tiết]</div>
+                    <div class="khung-link-video"><a href="#" target="_blank" class="btn-video">📺 Xem Video Bài Giảng</a></div>
+                    <div class="hop-lien-ket-mo-rong">
+                        🔗 <b>Tài liệu bổ trợ:</b> <a href="#" target="_blank">📄 Tải File Bài Tập</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+
+
+    <div id="popup-toan12" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.5); display: none; justify-content: center; align-items: center; z-index: 9999;">
+        <div style="background: white; width: 85%; max-width: 900px; height: 80vh; border-radius: 25px; border: 3px solid #40916c; padding: 30px; display: flex; flex-direction: column; position: relative; box-shadow: 0 15px 40px rgba(0,0,0,0.2);">
+            <button onclick="dongPopup('popup-toan12')" style="position: absolute; top: 15px; right: 15px; background: #ff4d4d; color: white; border: none; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; font-weight: bold; font-size: 16px;">✖</button>
+            <h2 style="color: #1b4332; margin-top: 0; text-align: center; border-bottom: 2px dashed #40916c; padding-bottom: 15px;">📐 TOÁN HỌC – KHỐI LỚP 12</h2>
+            
+            <div style="flex: 1; overflow-y: auto; padding-right: 15px; margin-top: 10px;">
+                <h3 style="color: #ff9f1c; background: #f7fdf9; padding: 10px; border-radius: 10px;">CHƯƠNG I. (Khánh tự điền)</h3>
+
+                <div class="khoi-bai-hoc">
+                    <h4>Bài 1. [Tên bài học]</h4>
+                    <p>📌 <b>Khái niệm:</b> [Điền khái niệm vào đây]</p>
+                    <div class="hop-cong-thuc">💡 <b>Công thức/Định lý:</b> [Điền công thức vào đây]</div>
+                    <p>📝 <b>Ví dụ mẫu:</b> [Điền đề bài ví dụ]</p>
+                    <div class="hop-loi-giai">👉 <b>Lời giải:</b> [Điền lời giải chi tiết]</div>
+                    <div class="khung-link-video"><a href="#" target="_blank" class="btn-video">📺 Xem Video Bài Giảng</a></div>
+                    <div class="hop-lien-ket-mo-rong">
+                        🔗 <b>Tài liệu bổ trợ:</b> <a href="#" target="_blank">📄 Tải File Bài Tập</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+
+
 <script>
-    // Hàm đổi hiệu ứng nút Khối lớp và ẩn/hiện môn học tương ứng khi click
+    // Hàm chuyển đổi giữa các Khối lớp
     function moTab(tenLop) {
-        // Cập nhật trạng thái màu sắc của bộ nút khối lớp
         document.querySelectorAll('.btn-tab').forEach(btn => btn.classList.remove('active-tab'));
         document.getElementById('tab-' + tenLop).classList.add('active-tab');
 
-        // Ẩn tất cả các vùng môn học trước
         document.querySelectorAll('.vung-lop-content').forEach(vung => vung.style.display = 'none');
-        
-        // Hiển thị vùng môn học của khối lớp được chọn
         document.getElementById('vung-' + tenLop).style.display = 'block';
+    }
+
+    // --- HÀM MỚI: XỬ LÝ ĐÓNG / MỞ POPUP ---
+    // Hàm này rất thông minh, Khánh chỉ cần truyền ID của bảng vào là nó tự mở
+    function moPopup(idBieuMau) {
+        document.getElementById(idBieuMau).style.display = 'flex';
+    }
+
+    // Hàm này giúp đóng bảng lại
+    function dongPopup(idBieuMau) {
+        document.getElementById(idBieuMau).style.display = 'none';
     }
 </script>
 </body>
