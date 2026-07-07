@@ -138,36 +138,64 @@
             <button class="btn-tab" id="tab-lop12" onclick="moTab('lop12')">Khối Lớp 12</button>
         </div>
 
-        <div id="vung-hien-thi-mon">
+        <div id="vung-lop10" class="vung-lop-content">
             <div class="vung-mon-hoc">
-                <div class="btn-mon">📐 Toán Học</div>
-                <div class="btn-mon">📚 Ngữ Văn</div>
-                <div class="btn-mon">🇬🇧 Tiếng Anh</div>
-                <div class="btn-mon">⏳ Lịch Sử</div>
-                <div class="btn-mon">🗺️ Địa Lý</div>
-                <div class="btn-mon">🧪 Hóa Học</div>
-                <div class="btn-mon">🌱 Sinh Học</div>
-                <div class="btn-mon">⚡ Vật Lý</div>
-                <div class="btn-mon">💻 Tin Học</div>
-                <div class="btn-mon">⚖️ GDKTPL</div>
+                <div class="btn-mon">📐 Toán Lớp 10</div>
+                <div class="btn-mon">📚 Ngữ Văn 10</div>
+                <div class="btn-mon">🇬🇧 Tiếng Anh 10</div>
+                <div class="btn-mon">⏳ Lịch Sử 10</div>
+                <div class="btn-mon">🗺️ Địa Lý 10</div>
+                <div class="btn-mon">🧪 Hóa Học 10</div>
+                <div class="btn-mon">🌱 Sinh Học 10</div>
+                <div class="btn-mon">⚡ Vật Lý 10</div>
+                <div class="btn-mon">💻 Tin Học 10</div>
+                <div class="btn-mon">⚖️ GDKTPL 10</div>
+            </div>
+        </div>
+
+        <div id="vung-lop11" class="vung-lop-content" style="display: none;">
+            <div class="vung-mon-hoc">
+                <div class="btn-mon">📐 Toán Lớp 11</div>
+                <div class="btn-mon">📚 Ngữ Văn 11</div>
+                <div class="btn-mon">🇬🇧 Tiếng Anh 11</div>
+                <div class="btn-mon">⏳ Lịch Sử 11</div>
+                <div class="btn-mon">🗺️ Địa Lý 11</div>
+                <div class="btn-mon">🧪 Hóa Học 11</div>
+                <div class="btn-mon">🌱 Sinh Học 11</div>
+                <div class="btn-mon">⚡ Vật Lý 11</div>
+                <div class="btn-mon">💻 Tin Học 11</div>
+                <div class="btn-mon">⚖️ GDKTPL 11</div>
+            </div>
+        </div>
+
+        <div id="vung-lop12" class="vung-lop-content" style="display: none;">
+            <div class="vung-mon-hoc">
+                <div class="btn-mon">📐 Toán Lớp 12</div>
+                <div class="btn-mon">📚 Ngữ Văn 12</div>
+                <div class="btn-mon">🇬🇧 Tiếng Anh 12</div>
+                <div class="btn-mon">⏳ Lịch Sử 12</div>
+                <div class="btn-mon">🗺️ Địa Lý 12</div>
+                <div class="btn-mon">🧪 Hóa Học 12</div>
+                <div class="btn-mon">🌱 Sinh Học 12</div>
+                <div class="btn-mon">⚡ Vật Lý 12</div>
+                <div class="btn-mon">💻 Tin Học 12</div>
+                <div class="btn-mon">⚖️ GDKTPL 12</div>
             </div>
         </div>
     </div>
 
 <script>
-    // Hàm đổi hiệu ứng nút Khối lớp khi click
+    // Hàm đổi hiệu ứng nút Khối lớp và ẩn/hiện môn học tương ứng khi click
     function moTab(tenLop) {
+        // Cập nhật trạng thái màu sắc của bộ nút khối lớp
         document.querySelectorAll('.btn-tab').forEach(btn => btn.classList.remove('active-tab'));
         document.getElementById('tab-' + tenLop).classList.add('active-tab');
 
-        let vungMon = document.getElementById('vung-hien-thi-mon');
-        if (tenLop === 'lop10') {
-            // Hiện bộ nút môn học nếu chọn lớp 10
-            vungMon.style.display = 'block';
-        } else {
-            // Tạm thời ẩn đi hoặc thông báo ở các khối lớp chưa làm tới
-            vungMon.style.display = 'none';
-        }
+        // Ẩn tất cả các vùng môn học trước
+        document.querySelectorAll('.vung-lop-content').forEach(vung => vung.style.display = 'none');
+        
+        // Hiển thị vùng môn học của khối lớp được chọn
+        document.getElementById('vung-' + tenLop).style.display = 'block';
     }
 </script>
 </body>
