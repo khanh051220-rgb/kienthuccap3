@@ -140,7 +140,7 @@
 
         <div id="vung-lop10" class="vung-lop-content">
             <div class="vung-mon-hoc">
-                <div class="btn-mon">📐 Toán Lớp 10</div>
+                <div class="btn-mon" onclick="moPopupToan10()">📐 Toán Lớp 10</div>
                 <div class="btn-mon">📚 Ngữ Văn 10</div>
                 <div class="btn-mon">🇬🇧 Tiếng Anh 10</div>
                 <div class="btn-mon">⏳ Lịch Sử 10</div>
@@ -183,9 +183,10 @@
             </div>
         </div>
     </div>
+
 <div id="popup-kien-thuc" style="
     position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-    background: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; z-index: 9999;
+    background: rgba(0, 0, 0, 0.5); display: none; justify-content: center; align-items: center; z-index: 9999;
 ">
     <div style="
         background: white; width: 85%; max-width: 900px; height: 80vh; 
@@ -193,66 +194,10 @@
         display: flex; flex-direction: column; position: relative;
         box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     ">
-        <button style="
+        <button onclick="dongPopupToan10()" style="
             position: absolute; top: 15px; right: 15px; background: #ff4d4d; 
             color: white; border: none; border-radius: 50%; width: 35px; height: 35px; 
             cursor: pointer; font-weight: bold; font-size: 16px;
         ">✖</button>
 
-        <h2 style="color: #1b4332; margin-top: 0; text-align: center; border-bottom: 2px dashed #40916c; padding-bottom: 15px;">
-            📐 TOÁN HỌC – KHỐI LỚP 10
-        </h2>
-
-        <div style="flex: 1; overflow-y: auto; padding-right: 15px; margin-top: 10px;">
-            
-            <h3 style="color: #ff9f1c; background: #f7fdf9; padding: 10px; border-radius: 10px;">
-                CHƯƠNG I. MỆNH ĐỀ VÀ TẬP HỢP
-            </h3>
-
-            <div style="margin-left: 10px;">
-                <h4 style="color: #2d6a4f; font-size: 18px;">Bài 1. Mệnh đề</h4>
-                
-                <p>📌 <b>Khái niệm:</b> Mệnh đề toán học là một câu khẳng định có tính đúng hoặc sai rõ ràng. Một mệnh đề không thể vừa đúng vừa sai.</p>
-                
-                <div style="background: #e8f5e9; padding: 15px; border-left: 5px solid #40916c; border-radius: 8px; margin: 15px 0;">
-                    💡 <b>Mệnh đề phủ định:</b> Phủ định của mệnh đề $P$ là mệnh đề $\overline{P}$. 
-                    Nếu $P$ đúng thì $\overline{P}$ sai, và ngược lại.
-                </div>
-
-                <p>📝 <b>Ví dụ mẫu:</b> Phủ định của mệnh đề "$P$: Số 5 là số chẵn" là gì? Tính đúng sai?</p>
-                <div style="background: #f8f9fa; padding: 12px; border-radius: 8px; font-style: italic; color: #555;">
-                    👉 <b>Lời giải:</b> Mệnh đề phủ định là "$\overline{P}$: Số 5 không phải là số chẵn" (hoặc Số 5 là số lẻ). Mệnh đề $P$ sai, còn mệnh đề $\overline{P}$ là mệnh đề đúng.
-                </div>
-
-                <div style="margin-top: 20px; text-align: right;">
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style="
-                        display: inline-block; background: #e63946; color: white; 
-                        padding: 10px 20px; border-radius: 50px; text-decoration: none; 
-                        font-weight: bold; font-size: 14px; box-shadow: 0 4px 10px rgba(230,57,70,0.3);
-                    ">
-                        📺 Xem Video Bài Giảng Bài 1
-                    </a>
-                </div>
-            </div>
-
-            <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
-
-        </div>
-    </div>
-</div>
-<script>
-    // Hàm đổi hiệu ứng nút Khối lớp và ẩn/hiện môn học tương ứng khi click
-    function moTab(tenLop) {
-        // Cập nhật trạng thái màu sắc của bộ nút khối lớp
-        document.querySelectorAll('.btn-tab').forEach(btn => btn.classList.remove('active-tab'));
-        document.getElementById('tab-' + tenLop).classList.add('active-tab');
-
-        // Ẩn tất cả các vùng môn học trước
-        document.querySelectorAll('.vung-lop-content').forEach(vung => vung.style.display = 'none');
-        
-        // Hiển thị vùng môn học của khối lớp được chọn
-        document.getElementById('vung-' + tenLop).style.display = 'block';
-    }
-</script>
-</body>
-</html>
+        <h2 style="color: #1b4332; margin-top: 0; text-align: center; border-bottom: 2
