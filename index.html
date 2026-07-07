@@ -24,7 +24,7 @@
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             padding: 20px; 
-            background: var(--bg-gradient); 
+            background: var(--bg-gradient);
             min-height: 100vh;
             margin: 0;
             display: flex;
@@ -140,7 +140,7 @@
 
         <div id="vung-lop10" class="vung-lop-content">
             <div class="vung-mon-hoc">
-                <div class="btn-mon" onclick="moPopupToan10()">📐 Toán Lớp 10</div>
+                <div class="btn-mon">📐 Toán Lớp 10</div>
                 <div class="btn-mon">📚 Ngữ Văn 10</div>
                 <div class="btn-mon">🇬🇧 Tiếng Anh 10</div>
                 <div class="btn-mon">⏳ Lịch Sử 10</div>
@@ -184,20 +184,19 @@
         </div>
     </div>
 
-<div id="popup-kien-thuc" style="
-    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-    background: rgba(0, 0, 0, 0.5); display: none; justify-content: center; align-items: center; z-index: 9999;
-">
-    <div style="
-        background: white; width: 85%; max-width: 900px; height: 80vh; 
-        border-radius: 25px; border: 3px solid #40916c; padding: 30px;
-        display: flex; flex-direction: column; position: relative;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    ">
-        <button onclick="dongPopupToan10()" style="
-            position: absolute; top: 15px; right: 15px; background: #ff4d4d; 
-            color: white; border: none; border-radius: 50%; width: 35px; height: 35px; 
-            cursor: pointer; font-weight: bold; font-size: 16px;
-        ">✖</button>
+<script>
+    // Hàm đổi hiệu ứng nút Khối lớp và ẩn/hiện môn học tương ứng khi click
+    function moTab(tenLop) {
+        // Cập nhật trạng thái màu sắc của bộ nút khối lớp
+        document.querySelectorAll('.btn-tab').forEach(btn => btn.classList.remove('active-tab'));
+        document.getElementById('tab-' + tenLop).classList.add('active-tab');
 
-        <h2 style="color: #1b4332; margin-top: 0; text-align: center; border-bottom: 2
+        // Ẩn tất cả các vùng môn học trước
+        document.querySelectorAll('.vung-lop-content').forEach(vung => vung.style.display = 'none');
+        
+        // Hiển thị vùng môn học của khối lớp được chọn
+        document.getElementById('vung-' + tenLop).style.display = 'block';
+    }
+</script>
+</body>
+</html>
