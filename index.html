@@ -65,10 +65,10 @@
             display: flex; 
             justify-content: center; 
             gap: 15px; 
-            margin-bottom: 15px; 
+            margin-bottom: 30px; 
         }
 
-        button { 
+        .btn-tab { 
             padding: 15px 35px; 
             cursor: pointer; 
             background: linear-gradient(45deg, #2d6a4f, #52b788); 
@@ -80,14 +80,49 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
-        button:active { 
+        .btn-tab:active { 
             transform: scale(0.95); 
         }
 
-        /* Màu cam rực rỡ khi nút được kích hoạt */
-        button.active-tab { 
+        /* Màu cam rực rỡ khi nút khối lớp được kích hoạt */
+        .btn-tab.active-tab { 
             background: linear-gradient(45deg, #ff9f1c, #f77f00); 
             box-shadow: 0 5px 15px rgba(247,127,0,0.4); 
+        }
+
+        /* --- KHU VỰC CHỨA CÁC NÚT MÔN HỌC --- */
+        .vung-mon-hoc {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            padding: 20px;
+            background: #f7fdf9;
+            border-radius: 20px;
+            border: 1px dashed var(--secondary);
+        }
+
+        .btn-mon {
+            padding: 15px;
+            cursor: pointer;
+            background: white;
+            color: var(--primary);
+            border: 2px solid #b7e4c7;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .btn-mon:hover {
+            background: var(--light);
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .btn-mon:active {
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -102,17 +137,37 @@
             <button class="btn-tab" id="tab-lop11" onclick="moTab('lop11')">Khối Lớp 11</button>
             <button class="btn-tab" id="tab-lop12" onclick="moTab('lop12')">Khối Lớp 12</button>
         </div>
+
+        <div id="vung-hien-thi-mon">
+            <div class="vung-mon-hoc">
+                <div class="btn-mon">📐 Toán Học</div>
+                <div class="btn-mon">📚 Ngữ Văn</div>
+                <div class="btn-mon">🇬🇧 Tiếng Anh</div>
+                <div class="btn-mon">⏳ Lịch Sử</div>
+                <div class="btn-mon">🗺️ Địa Lý</div>
+                <div class="btn-mon">🧪 Hóa Học</div>
+                <div class="btn-mon">🌱 Sinh Học</div>
+                <div class="btn-mon">⚡ Vật Lý</div>
+                <div class="btn-mon">💻 Tin Học</div>
+                <div class="btn-mon">⚖️ GDKTPL</div>
+            </div>
+        </div>
     </div>
 
 <script>
-    // Hàm đổi màu nền Dark Mode
-    function toggleDarkMode() {
-        document.body.classList.toggle('dark-mode');
-    }
-    // Hàm đổi hiệu ứng nút khi click
+    // Hàm đổi hiệu ứng nút Khối lớp khi click
     function moTab(tenLop) {
         document.querySelectorAll('.btn-tab').forEach(btn => btn.classList.remove('active-tab'));
         document.getElementById('tab-' + tenLop).classList.add('active-tab');
+
+        let vungMon = document.getElementById('vung-hien-thi-mon');
+        if (tenLop === 'lop10') {
+            // Hiện bộ nút môn học nếu chọn lớp 10
+            vungMon.style.display = 'block';
+        } else {
+            // Tạm thời ẩn đi hoặc thông báo ở các khối lớp chưa làm tới
+            vungMon.style.display = 'none';
+        }
     }
 </script>
 </body>
