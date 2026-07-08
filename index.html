@@ -6,6 +6,61 @@
     <title> Học Tập cùng Khánh</title>
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/188/188333.png">
     <style>
+        /* Định dạng cho nút bấm xem lời giải */
+.nut-xem-loi-giai {
+    background: none;
+    border: none;
+    color: #2d6a4f;
+    padding: 0;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    outline: none;
+    user-select: none;
+}
+
+.nut-xem-loi-giai:hover {
+    color: #40916c;
+}
+
+/* Hiệu ứng xoay mũi tên mượt mà */
+.nut-xem-loi-giai .mui-ten {
+    display: inline-block;
+    font-size: 10px;
+    transition: transform 0.25s ease;
+}
+
+/* Kỹ thuật CSS Grid tạo chuyển động chiều cao (height) từ 0 đến tự động mượt mà */
+.vung-chuyen-dong {
+    display: grid;
+    grid-template-rows: 0fr; /* Mặc định ẩn bằng cách ép hàng về 0 */
+    transition: grid-template-rows 0.3s ease-out, opacity 0.25s ease-out;
+    opacity: 0;
+}
+
+/* Bắt buộc phải có thuộc tính này để phần tử con bên trong co giãn chính xác */
+.noi-dung-ben-trong {
+    overflow: hidden;
+    min-height: 0; 
+}
+
+/* --- TRẠNG THÁI KHI NGƯỜI DÙNG BẤM MỞ --- */
+
+/* Xoay mũi tên chúi xuống */
+.cum-loi-giai.da-mo .nut-xem-loi-giai .mui-ten {
+    transform: rotate(90deg);
+}
+
+/* Xổ nội dung xuống mượt mà và làm hiện rõ chữ */
+.cum-loi-giai.da-mo .vung-chuyen-dong {
+    grid-template-rows: 1fr; /* Mở rộng chiều cao vừa vặn với nội dung tự động */
+    opacity: 1;
+    margin-top: 8px;
+}
         /* --- KHUNG ẢNH ĐA NĂNG --- */
         .khung-anh-minh-hoa { text-align: center; margin: 15px auto; max-width: 100%; width: fit-content; }
         .khung-anh-minh-hoa img { max-width: 100%; height: auto; border-radius: 12px; border: 2px solid #b7e4c7; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
@@ -243,7 +298,7 @@
         document.getElementById('vung-' + tenLop).style.display = 'block';
     }
 
-    function hienThiKhungPoup(maMon, maLop) {
+   function hienThiKhungPoup(maMon, maLop) {
         if (!khoDuLieuHocTap[maLop] || !khoDuLieuHocTap[maLop][maMon] || khoDuLieuHocTap[maLop][maMon].chuongList.length === 0) {
             alert("Đang soạn thảo môn học này, bạn quay lại sau nhé! 🛠️");
             return;
@@ -269,12 +324,36 @@
                         if (phan.meoNho) {
                             htmlNoiDung += `<div class="hop-cong-thuc">💡 <b>Mẹo/Chú ý:</b> ${phan.meoNho}</div>`;
                         }
+                        
+                        // --- PHẦN ĐƯỢC NÂNG CẤP: Gộp Đề bài và Lời giải vào khung đóng/mở ---
                         if (phan.deBaiViDu) {
-                            htmlNoiDung += `<p>📝 <b>Ví dụ mẫu:</b> ${phan.deBaiViDu}</p>`;
+                            htmlNoiDung += `
+                                <div class="khung-vi-du" style="margin: 15px 0; padding: 15px; background: #f8f9fa; border-left: 4px solid #2d6a4f; border-radius: 6px;">
+                                    <div class="de-bai-vi-du" style="font-weight: 500; color: #212529; line-height: 1.5;">
+                                        <strong>📝 Ví dụ mẫu:</strong> ${phan.deBaiViDu}
+                                    </div>
+                                    
+                                    <!-- Nếu có lời giải thì hiển thị nút bấm đóng mở -->
+                                    ${phan.loiGiaiViDu ? `
+                                        <div class="cum-loi-giai">
+                                            <button type="button" class="nut-xem-loi-giai" onclick="this.parentElement.classList.toggle('da-mo')">
+                                                <span class="mui-ten">▶</span> Xem lời giải mẫu
+                                            </button>
+                                            
+                                            <div class="vung-chuyen-dong">
+                                                <div class="noi-dung-ben-trong">
+                                                    <div style="margin-top: 10px; padding: 12px; background: #ffffff; border: 1px dashed #2d6a4f; border-radius: 4px; color: #333; line-height: 1.6;">
+                                                        ${phan.loiGiaiViDu}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ` : ''}
+                                </div>
+                            `;
                         }
-                        if (phan.loiGiaiViDu) {
-                            htmlNoiDung += `<div class="hop-loi-giai">👉 <b>Lời giải:</b> ${phan.loiGiaiViDu}</div>`;
-                        }
+                        // ------------------------------------------------------------------
+
                         htmlNoiDung += `<br>`; // Tạo chút khoảng trống giữa các phần nhỏ
                     });
                 }
@@ -303,7 +382,6 @@
         document.getElementById('popup-noidung').innerHTML = htmlNoiDung;
         document.getElementById('popup-chung').style.display = 'flex';
     }
-
     function dongPopup() {
         document.getElementById('popup-chung').style.display = 'none';
     }
