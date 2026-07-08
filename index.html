@@ -151,104 +151,105 @@
        KHO DỮ LIỆU ĐA CHIỀU (FULL PROPERTIES)
        Cậu có thể thêm bất cứ trường nào có trong danh sách bên dưới!
        ========================================================= */
-    const khoDuLieuHocTap = {
-        lop10: {
-            toan: {
-                tenMon: "📐 TOÁN HỌC 10",
-                chuongList: [
-                    {
-                        tenChuong: "CHƯƠNG I. MỆNH ĐỀ VÀ TẬP HỢP",
-                        baiList: [
-                            {
-                                tenBai: "Bài 1. Mệnh đề",
-                                danhSachPhan: [
-                                    {
-                                        khaiNiem: "Mệnh đề toán học là một khẳng định có tính đúng hoặc sai rõ ràng.",
-                                        congThuc: "Ký hiệu: P, Q, R... Phủ định là P̅.",
-                                        tinhChat: "Một mệnh đề không thể vừa đúng vừa sai.",
-                                        meoNho: "Câu hỏi, câu ra lệnh không bao giờ là mệnh đề.",
-                                        deBaiViDu: "Câu 'Hà Nội là thủ đô VN' là mệnh đề gì?",
-                                        loiGiaiViDu: "Là mệnh đề đúng (mệnh đề xã hội)."
-                                    }
-                                ],
-                            },
-                            {
-                                tenBai: "Bài 2. Mệnh đề chứa biến",
-                                danhSachPhan: [
-                                    {
-                                        khaiNiem: "Là câu chứa ẩn số (x, y, n...) nên chưa biết Đúng hay Sai. Phải thay một số cụ thể vào biến mới chốt được tính Đúng/Sai của nó.",
-                                        congThuc: "Ký hiệu: P(n), P(x, y)... (tùy vào biến cụ thể)",
-                                        deBaiViDu: "Xét xem câu '5n chia hết cho 2' có phải mệnh đề chứa biến không? Tính đúng sai khi n = 4 và n = 5.?",
-                                        loiGiaiViDu: "Đây chính là mệnh đề chứa biến (vì dính ẩn n).<br>+)Khi thế n = 4: Ta được câu '20 chia hết cho 2' ➔ Đây là mệnh đề đúng.<br>+)Khi thế n = 5: Ta được câu '25 chia hết cho 2' ➔ Đây là mệnh đề sai."
-                                    }
-                                ],`
-                            },
-                            {
-                                tenBai: "Bài 3. Mệnh đề phủ định",
-                                danhSachPhan: [
-                                    {
-                                        khaiNiem: "Là mệnh đề 'lật kèo' (nói ngược lại) với mệnh đề gốc P.",
-                                        congThuc: "Ký hiệu: P̅.",
-                                        tinhChat: "P và P̅ luôn đối đầu nhau. Nếu P Đúng thì P̅ Sai, và ngược lại",
-                                        meoNho: "Thêm (hoặc bớt) từ 'không', 'không phải' vào trước vị ngữ.",
-                                        deBaiViDu: "Tìm mệnh đề phủ định của mệnh đề 'P: 5 chia hết cho 3'.",
-                                        loiGiaiViDu: " Mệnh đề phủ định là 'P̅: 5 không chia hết cho 3'(vì P sai nên P̅ đúng)."
-                                    }
-                                ],
-                            },
-                            {
-                                tenBai: "Bài 4. Mệnh đề kéo theo",
-                                danhSachPhan: [
-                                    {
-                                        khaiNiem: "Là mệnh đề dạng 'Nếu P thì Q'<br>+)P là Giả thiết (Điều kiện đủ để có Q).<br>+)Q là Kết luận (Điều kiện cần để có P).",
-                                        congThuc: "Ký hiệu: Kí hiệu là P ⇒ Q.",
-                                        tinhChat: "P ⇒ Q chỉ SAI khi P Đúng mà Q lại Sai (hứa mà bùng kèo). Các trường hợp còn lại mặc định Đúng.",
-                                        deBaiViDu: "Cho P: '9 chia hết cho 9' và Q: '9 chia hết cho 3'. Phát biểu mệnh đề kéo theo và xét tính đúng sai.",
-                                        loiGiaiViDu: "-Mệnh đề kéo theo: 'Nếu 9 chia hết cho 9 thì 9 chia hết cho 3'<br>+)Vì vế P Đúng và vế Q Đúng ➔ Mệnh đề P ⇒ Q Đúng."
-                                    }
-                                ],
-                            },
-                            {
-                                tenBai: "Bài 5. Mệnh  đảo",
-                                danhSachPhan: [
-                                    {
-                                        khaiNiem: "Là mệnh đề lật ngược vị trí của mệnh đề kéo theo. Mệnh đề đảo của P ⇒ Q là Q ⇒ P ('Nếu Q thì P').",
-                                        meoNho: "Mệnh đề gốc Đúng thì mệnh đề đảo chưa chắc đã Đúng (Đừng tưởng người ta tốt với mình là người ta yêu mình nha!).",
-                                        deBaiViDu: "Cho P: 'n = 0' và Q: 'n là số nguyên'. Phát biểu mệnh đề kéo theo và mệnh đề đảo của nó, sau đó xét tính đúng sai.",
-                                        loiGiaiViDu: "- Mệnh đề kéo theo (P ⇒ Q): 'Nếu n = 0 thì n là số nguyên' ➔ Mệnh đề này Đúng.<br>+)Mệnh đề đảo (Q ⇒ P): 'Nếu n là số nguyên thì n = 0' ➔ Mệnh đề này Sai (vì n có thể bằng 1, 2, 3...)."
-                                    }
-                                ],
-                            },
-                            {
-                                tenBai: "Bài 6. Mệnh đề tương đương",
-                                danhSachPhan: [
-                                    {
-                                        khaiNiem: "Là mệnh đề dạng 'P nếu và chỉ nếu Q' (hoặc 'P khi và chỉ khi Q').",
-                                        congThuc: "Ký hiệu: P ⇔ Q.",
-                                        tinhChat: "Mệnh đề P ⇔ Q chỉ ĐÚNG khi cả hai chiều kéo theo(P ⇒w Q và Q ⇒ P) đều Đúng. Lúc này, ta nói: P là điều kiện cần và đủ để có Q.",
-                                        deBaiViDu: "Cho P: 'Tứ giác ABCD là hình bình hành' và Q: 'Tứ giác ABCD có hai cặp cạnh đối song song'. Xét xem hai mệnh đề này có tương đương không.",
-                                        loiGiaiViDu: "-Chiều đi (P ⇒ Q): 'Nếu ABCD là hình bình hành thì có hai cặp cạnh đối song song' ➔ Đúng.<br>+)Chiều về (Q ⇒ P): 'Nếu ABCD có hai cặp cạnh đối song song thì là hình bình hành' ➔ Đúng.<br>+)Vì cả hai chiều đều Đúng ⇒P⇔Q là mệnh đề tương đương Đúng."
-                                    }
-                                ],
-                            },
-                            {
-                                tenBai: "Bài 7. Mệnh đề chứa kí hiệu ∀ và ∃",
-                                danhSachPhan: [
-                                    {
-                                        khaiNiem: "+)∀(Chữ A lộn ngược): Đọc là 'Với mọi' (Tất cả phần tử đều phải đúng).<br>+)∃(Chữ E quay ngược): Đọc là 'Tồn tại' hoặc 'Có ít nhất một' (Chỉ cần một đứa đúng là được).",
-                                        meoNho: "Để phủ định mệnh đề chứa ∀ và ∃, bồ chỉ cần lật ngược ký hiệu và phủ định tính chất phía sau:<br>+)Phủ định của ∀ là ∃ và ngược lại.<br>+)Tính chất P(x) đổi thành P̅(x) (đổi dấu = ➔ ≠, > ➔ <, < ➔ >,...).",
-                                        deBaiViDu: "Tìm mệnh đề phủ định của câu:'P:∃x ∈ ℝ,x²+1=0'",
-                                        loiGiaiViDu: "Áp dụng tuyệt chiêu 'lật kèo':<br>+)Đổi ∃ thành ∀.<br>+)Đổi = thành ≠<br>+)Mệnh đề phủ định là:'P̅:∀x ∈ ℝ,x²+1≠0'."
-                                    }
-                                ],
-                 linkVideo: "https://youtu.be/edVegk01ZsA",
-                                linkTaiLieuHTML: `<a href="#">📄 Tải bài tập</a>
-                            }
-                        ],
-                    }
-                ]
-             }
-            },
+   const khoDuLieuHocTap = {
+    lop10: {
+        toan: {
+            tenMon: "📐 TOÁN HỌC 10",
+            chuongList: [
+                {
+                    tenChuong: "CHƯƠNG I. MỆNH ĐỀ VÀ TẬP HỢP",
+                    baiList: [
+                        {
+                            tenBai: "Bài 1. Mệnh đề",
+                            danhSachPhan: [
+                                {
+                                    khaiNiem: "Mệnh đề toán học là một khẳng định có tính đúng hoặc sai rõ ràng.",
+                                    congThuc: "Ký hiệu: P, Q, R... Phủ định là P̅.",
+                                    tinhChat: "Một mệnh đề không thể vừa đúng vừa sai.",
+                                    meoNho: "Câu hỏi, câu ra lệnh không bao giờ là mệnh đề.",
+                                    deBaiViDu: "Câu 'Hà Nội là thủ đô VN' là mệnh đề gì?",
+                                    loiGiaiViDu: "Là mệnh đề đúng (mệnh đề xã hội)."
+                                }
+                            ]
+                        },
+                        {
+                            tenBai: "Bài 2. Mệnh đề chứa biến",
+                            danhSachPhan: [
+                                {
+                                    khaiNiem: "Là câu chứa ẩn số (x, y, n...) nên chưa biết Đúng hay Sai. Phải thay một số cụ thể vào biến mới chốt được tính Đúng/Sai của nó.",
+                                    congThuc: "Ký hiệu: P(n), P(x, y)... (tùy vào biến cụ thể)",
+                                    deBaiViDu: "Xét xem câu '5n chia hết cho 2' có phải mệnh đề chứa biến không? Tính đúng sai khi n = 4 và n = 5.?",
+                                    loiGiaiViDu: "Đây chính là mệnh đề chứa biến (vì dính ẩn n).<br>+)Khi thế n = 4: Ta được câu '20 chia hết cho 2' ➔ Đây là mệnh đề đúng.<br>+)Khi thế n = 5: Ta được câu '25 chia hết cho 2' ➔ Đây là mệnh đề sai."
+                                }
+                            ]
+                        },
+                        {
+                            tenBai: "Bài 3. Mệnh đề phủ định",
+                            danhSachPhan: [
+                                {
+                                    khaiNiem: "Là mệnh đề 'lật kèo' (nói ngược lại) với mệnh đề gốc P.",
+                                    congThuc: "Ký hiệu: P̅.",
+                                    tinhChat: "P và P̅ luôn đối đầu nhau. Nếu P Đúng thì P̅ Sai, và ngược lại",
+                                    meoNho: "Thêm (hoặc bớt) từ 'không', 'không phải' vào trước vị ngữ.",
+                                    deBaiViDu: "Tìm mệnh đề phủ định của mệnh đề 'P: 5 chia hết cho 3'.",
+                                    loiGiaiViDu: " Mệnh đề phủ định là 'P̅: 5 không chia hết cho 3'(vì P sai nên P̅ đúng)."
+                                }
+                            ]
+                        },
+                        {
+                            tenBai: "Bài 4. Mệnh đề kéo theo",
+                            danhSachPhan: [
+                                {
+                                    khaiNiem: "Là mệnh đề dạng 'Nếu P thì Q'<br>+)P là Giả thiết (Điều kiện đủ để có Q).<br>+)Q là Kết luận (Điều kiện cần để có P).",
+                                    congThuc: "Ký hiệu: Kí hiệu là P ⇒ Q.",
+                                    tinhChat: "P ⇒ Q chỉ SAI khi P Đúng mà Q lại Sai (hứa mà bùng kèo). Các trường hợp còn lại mặc định Đúng.",
+                                    deBaiViDu: "Cho P: '9 chia hết cho 9' và Q: '9 chia hết cho 3'. Phát biểu mệnh đề kéo theo và xét tính đúng sai.",
+                                    loiGiaiViDu: "-Mệnh đề kéo theo: 'Nếu 9 chia hết cho 9 thì 9 chia hết cho 3'<br>+)Vì vế P Đúng và vế Q Đúng ➔ Mệnh đề P ⇒ Q Đúng."
+                                }
+                            ]
+                        },
+                        {
+                            tenBai: "Bài 5. Mệnh  đảo",
+                            danhSachPhan: [
+                                {
+                                    khaiNiem: "Là mệnh đề lật ngược vị trí của mệnh đề kéo theo. Mệnh đề đảo của P ⇒ Q là Q ⇒ P ('Nếu Q thì P').",
+                                    meoNho: "Mệnh đề gốc Đúng thì mệnh đề đảo chưa chắc đã Đúng (Đừng tưởng người ta tốt với mình là người ta yêu mình nha!).",
+                                    deBaiViDu: "Cho P: 'n = 0' và Q: 'n là số nguyên'. Phát biểu mệnh đề kéo theo và mệnh đề đảo của nó, sau đó xét tính đúng sai.",
+                                    loiGiaiViDu: "- Mệnh đề kéo theo (P ⇒ Q): 'Nếu n = 0 thì n là số nguyên' ➔ Mệnh đề này Đúng.<br>+)Mệnh đề đảo (Q ⇒ P): 'Nếu n là số nguyên thì n = 0' ➔ Mệnh đề này Sai (vì n có thể bằng 1, 2, 3...)."
+                                }
+                            ]
+                        },
+                        {
+                            tenBai: "Bài 6. Mệnh đề tương đương",
+                            danhSachPhan: [
+                                {
+                                    khaiNiem: "Là mệnh đề dạng 'P nếu và chỉ nếu Q' (hoặc 'P khi và chỉ khi Q').",
+                                    congThuc: "Ký hiệu: P ⇔ Q.",
+                                    tinhChat: "Mệnh đề P ⇔ Q chỉ ĐÚNG khi cả hai chiều kéo theo (P ⇒ Q và Q ⇒ P) đều Đúng. Lúc này, ta nói: P là điều kiện cần và đủ để có Q.",
+                                    deBaiViDu: "Cho P: 'Tứ giác ABCD là hình bình hành' và Q: 'Tứ giác ABCD có hai cặp cạnh đối song song'. Xét xem hai mệnh đề này có tương đương không.",
+                                    loiGiaiViDu: "-Chiều đi (P ⇒ Q): 'Nếu ABCD là hình bình hành thì có hai cặp cạnh đối song song' ➔ Đúng.<br>+)Chiều về (Q ⇒ P): 'Nếu ABCD có hai cặp cạnh đối song song thì là hình bình hành' ➔ Đúng.<br>+)Vì cả hai chiều đều Đúng ⇒P⇔Q là mệnh đề tương đương Đúng."
+                                }
+                            ]
+                        },
+                        {
+                            tenBai: "Bài 7. Mệnh đề chứa kí hiệu ∀ và ∃",
+                            danhSachPhan: [
+                                {
+                                    khaiNiem: "+)∀(Chữ A lộn ngược): Đọc là 'Với mọi' (Tất cả phần tử đều phải đúng).<br>+)∃(Chữ E quay ngược): Đọc là 'Tồn tại' hoặc 'Có ít nhất một' (Chỉ cần một đứa đúng là được).",
+                                    meoNho: "Để phủ định mệnh đề chứa ∀ và ∃, bồ chỉ cần lật ngược ký hiệu và phủ định tính chất phía sau:<br>+)Phủ định của ∀ là ∃ và ngược lại.<br>+)Tính chất P(x) đổi thành P̅(x) (đổi dấu = ➔ ≠, > ➔ <, < ➔ >,...).",
+                                    deBaiViDu: "Tìm mệnh đề phủ định của câu:'P:∃x ∈ ℝ,x²+1=0'",
+                                    loiGiaiViDu: "Áp dụng tuyệt chiêu 'lật kèo':<br>+)Đổi ∃ thành ∀.<br>+)Đổi = thành ≠<br>+)Mệnh đề phủ định là:'P̅:∀x ∈ ℝ,x²+1≠0'."
+                                }
+                            ],
+                            linkVideo: "https://youtu.be/edVegk01ZsA",
+                            linkTaiLieuHTML: `<a href="#">📄 Tải bài tập</a>`
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+},
             van: {
                 tenMon: "📚 NGỮ VĂN 10",
                 chuongList: [
