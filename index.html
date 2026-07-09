@@ -471,6 +471,58 @@
             ]
         }
     ]
+},
+{
+    tenChuong: "CHƯƠNG VI. HỆ THỨC LƯỢNG TRONG TAM GIÁC(LƯU Ý:NÊN CÓ SGK ĐỂ THAM KHẢO HÌNH)",
+    baiList: [
+        {
+            tenBai: "Bài 1. Định lí Côsin",
+            danhSachPhan: [
+                {
+  "khaiNiem": "Trong tam giác $ABC$, quy ước các kí hiệu:<br>+) $A, B, C$ là số đo các góc ở đỉnh tương ứng.<br>+) $a, b, c$ lần lượt là độ dài các cạnh đối diện với đỉnh $A, B, C$ (tức là $a = BC, b = AC, c = AB$).",
+  "congThuc": "• **Định lí Côsin:** Trong tam giác $ABC$, bình phương một cạnh bằng tổng bình phương hai cạnh còn lại trừ đi hai lần tích của hai cạnh đó với $\\cos$ của góc xen giữa.<br>+) $a^2 = b^2 + c^2 - 2bc \\cdot \\cos A$<br>+) $b^2 = c^2 + a^2 - 2ca \\cdot \\cos B$<br>+) $c^2 = a^2 + b^2 - 2ab \\cdot \\cos C$<br><br>• **Hệ quả (Tính góc khi biết 3 cạnh):**<br>+) $\\cos A = \\frac{b^2 + c^2 - a^2}{2bc}$<br>+) $\\cos B = \\frac{c^2 + a^2 - b^2}{2ca}$<br>+) $\\cos C = \\frac{a^2 + b^2 - c^2}{2ab}$",
+  "meoNho": "+) Định lí Côsin thực chất chính là **Định lí Pitago mở rộng** dành cho tam giác thường. Nếu góc $A = 90^\\circ$ thì $\\cos 90^\\circ = 0$, công thức lập tức biến thành $a^2 = b^2 + c^2$.<br>+) Dấu hiệu áp dụng: Dùng khi bài toán cho biết **2 cạnh và góc xen giữa** (để tìm cạnh còn lại) hoặc cho biết cả **3 cạnh** (để tính góc).",
+  "deBaiViDu": "Cho tam giác $ABC$ có góc $A = 60^\\circ$ và $AB = 2\\text{ cm}, AC = 3\\text{ cm}$. Tính độ dài cạnh $BC$.",
+  "loiGiaiViDu": "+) Áp dụng định lí Côsin cho cạnh $BC$ ($a$), ta có:<br>$BC^2 = AB^2 + AC^2 - 2 \\cdot AB \\cdot AC \\cdot \\cos A$<br>+) Thay số vào công thức:<br>$BC^2 = 2^2 + 3^2 - 2 \\cdot 2 \\cdot 3 \\cdot \\cos 60^\\circ$<br>$BC^2 = 4 + 9 - 12 \\cdot \\frac{1}{2} = 7$<br>+) Suy ra: $BC = \\sqrt{7}\\text{ cm}$."
+}
+            ]
+        },
+         {
+            tenBai: "Bài 2. Định lí sin",
+            danhSachPhan: [
+                {
+  "congThuc": "• **Định lí Sin:** Trong tam giác $ABC$, tỉ số giữa độ dài của mỗi cạnh và $\\sin$ của góc đối diện với cạnh đó bằng đường kính của đường tròn ngoại tiếp tam giác.<br>+$$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$$",
+  "meoNho": "+) Công thức mở rộng thường dùng để tính nhanh độ dài cạnh hoặc bán kính $R$:<br>• $a = 2R \\cdot \\sin A$, $b = 2R \\cdot \\sin B$, $c = 2R \\cdot \\sin C$<br>• $R = \\frac{a}{2\\sin A} = \\frac{b}{2\\sin B} = \\frac{c}{2\\sin C}$<br>+) Dấu hiệu áp dụng: Dùng khi biết **1 cạnh và 2 góc**, hoặc khi biết **2 cạnh và 1 góc đối diện**, hoặc khi bài toán yêu cầu tính **bán kính đường tròn ngoại tiếp $R$**.",
+  "deBaiViDu": "Cho tam giác $ABC$ có $\\widehat{A} = 120^\\circ$, $\\widehat{B} = 30^\\circ$ và cạnh $c = 10$. Tính số đo góc $C$ và các đại lượng $a, b, R$.",
+  "loiGiaiViDu": "+) Tìm góc $C$: Áp dụng định lí tổng ba góc trong tam giác:<br>$\\widehat{C} = 180^\\circ - (\\widehat{A} + \\widehat{B}) = 180^\\circ - (120^\\circ + 30^\\circ) = 30^\\circ$.<br>+) Áp dụng định lí Sin:<br>$\\frac{a}{\\sin 120^\\circ} = \\frac{b}{\\sin 30^\\circ} = \\frac{10}{\\sin 30^\\circ} = 2R$<br>+) Tính các đại lượng:<br>- $a = \\frac{10}{\\sin 30^\\circ} \\cdot \\sin 120^\\circ = \\frac{10}{0,5} \\cdot \\frac{\\sqrt{3}}{2} = 10\\sqrt{3}$<br>- $b = \\frac{10}{\\sin 30^\\circ} \\cdot \\sin 30^\\circ = 10$<br>- $R = \\frac{10}{2\\sin 30^\\circ} = \\frac{10}{2 \\cdot 0,5} = 10$.<br>+) Kết luận: $\\widehat{C} = 30^\\circ$, $a = 10\\sqrt{3}$, $b = 10$, $R = 10$."
+}
+            ]
+        },
+         {
+            tenBai: "Bài 3. Giải tam giác và ứng dụng thực tế",
+            danhSachPhan: [
+                {
+  "khaiNiem": "Giải tam giác là việc tính độ dài các cạnh và số đo các góc của một tam giác khi đã biết trước một số yếu tố (cạnh hoặc góc) của tam giác đó.",
+  "tinhChat": "Ta có thể giải được một tam giác nếu biết trước một trong ba trường hợp sau:<br>+) Trường hợp 1: Biết hai cạnh và góc xen giữa (Dùng định lí Côsin để tìm cạnh thứ ba, rồi dùng định lí Sin tính góc).<br>+) Trường hợp 2: Biết cả ba cạnh (Dùng hệ quả định lí Côsin để tính các góc).<br>+) Trường hợp 3: Biết một cạnh và hai góc (Dùng định lí tổng ba góc bằng $180^\\circ$ để tìm góc còn lại, rồi dùng định lí Sin để tìm hai cạnh).",
+  "meoNho": "+) Các công thức cốt lõi dùng để giải tam giác bao gồm: Định lí Côsin, định lí Sin, và định lí tổng ba góc trong một tam giác bằng $180^\\circ$.<br>+) Khi giải bài toán thực tế (đo khoảng cách, chiều cao), hãy cố gắng quy đổi các dữ kiện đề bài cho về các cạnh và góc của một tam giác cụ thể, xác định xem nó rơi vào trường hợp nào rồi áp dụng công thức tương ứng.",
+  "deBaiViDu": "1) Giải tam giác $ABC$ biết cạnh $b = 12$, góc $\\widehat{C} = 60^\\circ$ và $\\widehat{A} = 100^\\circ$.<br>2) Để đo khoảng cách giữa hai điểm $A$ và $C$ bị ngăn cách bởi một hồ nước, người ta chọn một điểm $B$ sao cho đo được $BC = 5\\text{ m}$, $BA = 12\\text{ m}$ và góc $\\widehat{BCA} = 37^\\circ$. Tính khoảng cách $AC$ (làm tròn đến hàng phần trăm).",
+  "loiGiaiViDu": "1) Tìm góc $\\widehat{B} = 180^\\circ - (100^\\circ + 60^\\circ) = 20^\\circ$.<br>Áp dụng định lí Sin:<br>$$\\frac{a}{\\sin 100^\\circ} = \\frac{12}{\\sin 20^\\circ} = \\frac{c}{\\sin 60^\\circ}$$<br>Suy ra: $a = \\frac{12 \\cdot \\sin 100^\\circ}{\\sin 20^\\circ} \\approx 34,6$; $c = \\frac{12 \\cdot \\sin 60^\\circ}{\\sin 20^\\circ} \\approx 30,4$.<br><br>2) Áp dụng định lí Sin cho tam giác $ABC$ tạo bởi 3 điểm:<br>$$\\frac{BC}{\\sin A} = \\frac{AB}{\\sin C} \\Rightarrow \\frac{5}{\\sin A} = \\frac{12}{\\sin 37^\\circ} \\Rightarrow \\sin A \\approx 0,2508$$<br>Suy ra $\\widehat{A} \\approx 14^\\circ31'$ $\\Rightarrow \\widehat{B} \\approx 180^\\circ - (37^\\circ + 14^\\circ31') = 128^\\circ29'$.<br>Tiếp tục dùng định lí Sin để tìm $AC$:<br>$$AC = \\frac{AB \\cdot \\sin B}{\\sin C} = \\frac{12 \\cdot \\sin 128^\\circ29'}{\\sin 37^\\circ} \\approx 15,61\\text{ m}.$$"
+}
+            ]
+        },
+          {
+            tenBai: "Bài 4. Công thức tính diện tích tam giác",
+            danhSachPhan: [
+              {
+  "khaiNiem": "Diện tích tam giác ($S$) là độ lớn của miền bề mặt phẳng được giới hạn bởi ba cạnh của tam giác đó.",
+  "congThuc": "• **Hệ thống 5 công thức tính diện tích tam giác $ABC$:**<br>1) **Đường cao:** $S = \\frac{1}{2}a \\cdot h_a = \\frac{1}{2}b \\cdot h_b = \\frac{1}{2}c \\cdot h_c$ (với $h_a, h_b, h_c$ là các đường cao tương ứng)<br>2) **Góc xen giữa:** $S = \\frac{1}{2}bc \\cdot \\sin A = \\frac{1}{2}ca \\cdot \\sin B = \\frac{1}{2}ab \\cdot \\sin C$<br>3) **Bán kính đường tròn ngoại tiếp $R$:** $S = \\frac{abc}{4R}$<br>4) **Bán kính đường tròn nội tiếp $r$:** $S = p \\cdot r$ (với $p = \\frac{a+b+c}{2}$ là nửa chu vi)<br>5) **Công thức Heron:** $S = \\sqrt{p(p-a)(p-b)(p-c)}$",
+  "meoNho": "+)**$S = p \\cdot r$** thôi nhé.<br>+) **Mẹo chọn công thức:**<br>• Biết 2 cạnh và góc xen giữa $\\rightarrow$ Dùng công thức số (2).<br>• Biết độ dài cả 3 cạnh $\\rightarrow$ Tính $p$ rồi dùng **Heron** (5).<br>• Bài toán bắt tính bán kính đường tròn nội tiếp $r$ hoặc ngoại tiếp $R$ $\\rightarrow$ Hãy tính diện tích $S$ trước (bằng Heron hoặc góc), sau đó dùng công thức biến đổi: $R = \\frac{abc}{4S}$ và $r = \\frac{S}{p}$.",
+  "deBaiViDu": "a) Tính diện tích tam giác $ABC$ biết $b = 14\\text{ cm}, c = 35\\text{ cm}$ và $\\widehat{A} = 60^\\circ$.<br>b) Tính diện tích tam giác $ABC$, bán kính đường tròn ngoại tiếp $R$ và nội tiếp $r$, biết $a = 4\\text{ cm}, b = 5\\text{ cm}, c = 3\\text{ cm}$.",
+  "loiGiaiViDu": "a) Áp dụng công thức tính diện tích theo tích hai cạnh và $\\sin$ góc xen giữa:<br>$S = \\frac{1}{2}bc \\cdot \\sin A = \\frac{1}{2} \\cdot 14 \\cdot 35 \\cdot \\sin 60^\\circ = 245 \\cdot \\frac{\\sqrt{3}}{2} = \\frac{245\\sqrt{3}}{2}\\text{ cm}^2$.<br><br>b) Tính nửa chu vi tam giác: $p = \\frac{4 + 5 + 3}{2} = 6\\text{ cm}$.<br>• Áp dụng công thức Heron tính diện tích $S$:<br>$S = \\sqrt{6 \\cdot (6 - 4) \\cdot (6 - 5) \\cdot (6 - 3)} = \\sqrt{6 \\cdot 2 \\cdot 1 \\cdot 3} = \\sqrt{36} = 6\\text{ cm}^2$.<br>• Tính bán kính đường tròn ngoại tiếp $R$:<br>$R = \\frac{abc}{4S} = \\frac{4 \\cdot 5 \\cdot 3}{4 \\cdot 6} = \\frac{60}{24} = 2,5\\text{ cm}$.<br>• Tính bán kính đường tròn nội tiếp $r$:<br>$r = \\frac{S}{p} = \\frac{6}{6} = 1\\text{ cm}$."
+}
+            ]
+        }
+    ]
 }
              ]
         },
