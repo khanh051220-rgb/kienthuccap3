@@ -816,26 +816,30 @@
             });
         });
 
-        document.getElementById('popup-noidung').innerHTML = htmlNoiDung;
-        document.getElementById('popup-chung').style.display = 'flex';
+   // Dòng 819 gốc của cậu: đổ dữ liệu vào popup
+document.getElementById('popup-noidung').innerHTML = htmlNoiDung;
+
+// CHÈN THÊM ĐOẠN NÀY VÀO NGAY DƯỚI ĐỂ SỬA LỖI \\ DẤU GẠCH CHÉO VÀ DỊCH TOÁN
+try {
+    // Sửa toàn bộ nội dung trong popup từ \\ thành \ để MathJax hiểu
+    let noiDungChuan = document.getElementById('popup-noidung').innerHTML;
+    document.getElementById('popup-noidung').innerHTML = noiDungChuan.replace(/\\\\/g, '\\');
+
+    // Gọi MathJax quét và dịch lại nội dung vừa đổ vào popup
+    if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
+        window.MathJax.typesetPromise();
+    }
+} catch (e) {
+    console.log("Đợi MathJax tải...");
+}
+
+// Dòng 820 gốc của cậu: hiển thị popup lên màn hình
+document.getElementById('popup-chung').style.display = 'flex';
     }
 
     function dongPopup() {
         document.getElementById('popup-chung').style.display = 'none';
     }
-    // Giả sử bạn có biến data chứa chuỗi khái niệm lấy từ JSON
-let nội_dung_gốc = data.khaiNiem; 
-
-// 1. Sửa lỗi dấu gạch chéo kép \\ thành \ đơn của LaTeX
-let nội_dung_sạch = nội_dung_gốc.replace(/\\\\/g, '\\');
-
-// 2. Ép MathJax quét và dịch lại nội dung sau khi đã đổ vào HTML
-document.querySelector('.khai-niem').innerHTML = nội_dung_sạch;
-
-// Dòng lệnh QUAN TRỌNG NHẤT: Báo cho MathJax biết có chữ mới để nó dịch lại
-if (window.MathJax && window.MathJax.typesetPromise) {
-    window.MathJax.typesetPromise();
-}
 </script>
     
 </body>
