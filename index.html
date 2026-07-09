@@ -245,7 +245,7 @@
                     ]
                 },
     {
-    tenChuong: "CHƯƠNG II. TẬP HỢP VÀ CÁC PHÉP TOÁN TRÊN TẬP HỢP",
+    tenChuong: "CHƯƠNG II. TẬP HỢP VÀ CÁC PHÉP TOÁN TRÊN TẬP HỢP(LƯU Ý: NÊN SỬ DỤNG KÈM SGK ĐỂ CÓ ẢNH MINH HỌA)",
     baiList: [
         {
             tenBai: "Bài 1. Tập hợp",
@@ -267,7 +267,56 @@
                     deBaiViDu: "Tập hợp các nghiệm của phương trình x² + 1 = 0 ➔ Tập rỗng (vì bình phương cộng 1 luôn vô nghiệm trên số thực).<br>+)Tập hợp những người đang sống trên Mặt Trời ➔ Tập rỗng (nóng thế ai sống nổi!).",
                 }
             ]
-        }
+        },
+ {
+                            tenBai: "Bài 3. Tập hợp con",
+                            danhSachPhan: [
+                                {
+                                    khaiNiem: " Nếu tất cả phần tử của tập T đều nằm gọn trong tập S, thì T chính là tập hợp con của S.",
+                                    congThuc: "Ký hiệu: T ⊂ S (đọc là T là tập con của S, hoặc T chứa trong S).<br>+)Viết ngược lại: S ⊃ T (đọc là S chứa T).<br>+)Nếu có ít nhất một đứa của T không nằm trong S: Kí hiệu T ⊄ S (T không là tập con của S).",
+                                    meoNho: "Luật ngầm toán học:<br>(+)Công thức tổng quát: ∀ x, x ∊ T ⟹ x ∊ S.<br>+)Quy ước tối cao: Tập rỗng (∅) luôn là con của mọi tập hợp.",
+                                    tinhChat: "Biểu đồ Ven (Bản đồ phân chia lãnh thổ): Người ta hay vẽ tập hợp bằng một vòng tròn khép kín. Nếu T là con của S, vòng tròn của T sẽ nằm thọt lỏm bên trong vòng tròn của S.",
+                                    deBaiViDu: "Cho 3 tập hợp: T ={2; 3; 5}, S ={2; 3; 5; 7; 9}, M ={2; 3; 4; 5\}",
+                                    loiGiaiViDu: "(+)T ⊂ S: Đúng, vì cả 3 số 2, 3, 5 của T đều có mặt trong S.<br>(+)M ⊄ S: Đúng, vì tuy M có 2, 3, 5 giống S nhưng lại lòi ra số 4 thuộc M mà S thì không có."
+                                }
+                            ],
+                        },
+        {
+                            tenBai: "Bài 4. Tập hợp bằng ",
+                            danhSachPhan: [
+                                {
+  "khaiNiem": "Hai tập hợp S và T được gọi là bằng nhau nếu mỗi phần tử của T cũng thuộc S và ngược lại.",
+  "congThuc": "Ký hiệu:S = T",
+  "tinhChat": "Nếu S ⊂ T và T ⊂ S thì S = T. (Hai tập hợp là con của nhau thì bằng nhau).",
+  "deBaiViDu": "Cho S = {n | n là bội chung của 2 và 3; n < 20} và T = {n | n là bội của 6; n < 20}. Hai tập hợp này có bằng nhau không?",
+  "loiGiaiViDu": "Liệt kê các phần tử ta được: S = {0; 6; 12; 18} và T = {0; 6; 12; 18}. Vì các phần tử giống y hệt nhau nên S = T."
+}
+                            ],
+                        },
+         {
+                            tenBai: "Bài 5. Mối quan hệ giữa các tập hợp số",
+                            danhSachPhan: [
+                               {
+  "khaiNiem": "Các tập hợp số cơ bản bao gồm: Số tự nhiên (N), Số nguyên (Z - gồm số tự nhiên và số nguyên âm), Số hữu tỉ (Q - viết được dưới dạng phân số a/b) và Số thực (R - gồm số hữu tỉ và số vô tỉ).",
+  "congThuc": "N ⊂ Z ⊂ Q ⊂ R",
+  "meonho": "Mẹo nhớ thứ tự bao nhau từ nhỏ đến lớn: Ném (N) Gạch (Z) Qua (Q) Rào (R). Tập đứng trước luôn là con của tập đứng sau!",
+  "deBaiViDu": "Cho tập hợp B = {– 1; 2; 4; 10}. Xét xem B có phải là tập con của N, Z, Q, R không?",
+  "loiGiaiViDu": "- B không là tập con của N vì chứa –1 (không phải số tự nhiên).\n- B là tập con của Z vì tất cả phần tử đều là số nguyên.\n- Vì Z ⊂ Q ⊂ R nên B cũng nghiễm nhiên là tập con của Q và R."
+}
+                            ],
+                        },
+         {
+                            tenBai: "Bài 6. Các tập con thường dùng của ℝ",
+                            danhSachPhan: [
+                              {
+  "khaiNiem": "Các tập con thường dùng của tập số thực ℝ bao gồm:<br>• Khoảng: Không lấy 2 đầu mút (dùng ngoặc tròn).<br>• Đoạn: Lấy cả 2 đầu mút (dùng ngoặc vuông).<br>• Nửa khoảng: Chỉ lấy 1 trong 2 đầu mút.",
+  "congThuc": "• Khoảng:<br>(a; b) = {x ∈ ℝ | a < x < b}<br>(a; +∞) = {x ∈ ℝ | x > a}<br>(-∞; b) = {x ∈ ℝ | x < b}<br>(-∞; +∞) = ℝ<br><br>• Đoạn:<br>[a; b] = {x ∈ ℝ | a ≤ x ≤ b}<br><br>• Nửa khoảng:<br>[a; b) = {x ∈ ℝ | a ≤ x < b}<br>(a; b] = {x ∈ ℝ | a < x ≤ b}<br>[a; +∞) = {x ∈ ℝ | x ≥ a}<br>(-∞; b] = {x ∈ ℝ | x ≤ b}",
+  "meonho": "• Kí hiệu +∞: Dương vô cực (dương vô cùng).<br>• Kí hiệu -∞: Âm vô cực (âm vô cùng).<br>• Mẹo nhớ dấu ngoặc: Thấy dấu bằng (≤, ≥) thì dùng ngoặc vuông [ ], không có dấu bằng (<, >) thì dùng ngoặc tròn ( ). Riêng các đầu vô cực (-∞, +∞) luôn luôn đi với ngoặc tròn!",
+  "deBaiViDu": "Viết lại các tập hợp sau dưới dạng khoảng, đoạn hoặc nửa khoảng:<br>1) A = {x ∈ ℝ | 5 < x ≤ 10}<br>2) B = {x ∈ ℝ | x < 3}",
+  "loiGiaiViDu": "1) Vì 5 < x ≤ 10 nên x thuộc nửa khoảng: A = (5; 10].<br>2) Vì x < 3 nên x chạy từ âm vô cùng đến 3: B = (-∞; 3)."
+}
+                            ],
+                        },
     ]
 }
     ]
