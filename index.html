@@ -612,6 +612,77 @@
             ]
         }
     ]
+},
+                {
+    tenChuong: "CHƯƠNG X. VECTƠ TRONG MẶT PHẲNG TỌA ĐỘ(NÊN GỌC KÈM SGK)",
+    baiList: [
+        {
+            tenBai: "Bài 1. Tọa độ của vectơ",
+            danhSachPhan: [
+                {
+  "khaiNiem": "Hệ trục tọa độ $Oxy$ gồm hai trục vuông góc $Ox$ (trục hoành) và $Oy$ (trục tung) chung gốc $O$. Kí hiệu $\\vec{i}$ là vectơ đơn vị của trục $Ox$, $\\vec{j}$ là vectơ đơn vị của trục $Oy$ (với $|\\vec{i}| = |\\vec{j}| = 1$).<br><br>Mỗi vectơ $\\vec{u}$ trên mặt phẳng tọa độ được biểu diễn duy nhất qua hai vectơ đơn vị:<br>$$\\vec{u} = x_0\\vec{i} + y_0\\vec{j}$$<br>Khi đó, cặp số $(x_0; y_0)$ là tọa độ của $\\vec{u}$, kí hiệu là $\\vec{u} = (x_0; y_0)$ hoặc $\\vec{u}(x_0; y_0)$. Trong đó $x_0$ là hoành độ, $y_0$ là tung độ.",
+  "tinhChat": "Hai vectơ bằng nhau khi và chỉ khi hoành độ bằng hoành độ và tung độ bằng tung độ:<br>$$\\vec{u}(x; y) = \\vec{v}(x'; y') \\Leftrightarrow \\begin{cases} x = x' \\\\ y = y' \\end{cases}$$",
+  "meoNho": "+) Hệ số đi liền với vectơ đơn vị $\\vec{i}$ luôn là hoành độ (đứng trước), hệ số đi liền với vectơ đơn vị $\\vec{j}$ luôn là tung độ (đứng sau). Nếu khuyết vectơ nào thì tọa độ tương ứng bằng $0$.<br>+) Ví dụ nhanh: Nếu $\\vec{a} = 3\\vec{i} \\Rightarrow \\vec{a} = (3; 0)$; nếu $\\vec{b} = -2\\vec{j} \\Rightarrow \\vec{b} = (0; -2)$.",
+  "deBaiViDu": "1) Trong mặt phẳng $Oxy$, cho $\\vec{u} = (2; -4)$. Hãy biểu diễn vectơ $\\vec{u}$ qua hai vectơ đơn vị $\\vec{i}$ và $\\vec{j}$.<br>2) Tìm các số thực $m, n$ để hai vectơ $\\vec{a} = (m - 1; 5)$ và $\\vec{b} = (3; 2n + 1)$ bằng nhau.",
+  "loiGiaiViDu": "+) Câu 1: Dựa vào định nghĩa tọa độ vectơ, ta có:<br>$\\vec{u} = (2; -4) \\Rightarrow \\vec{u} = 2\\vec{i} + (-4)\\vec{j} = 2\\vec{i} - 4\\vec{j}$.<br><br>+) Câu 2: Để $\\vec{a} = \\vec{b}$, ta cho các tọa độ tương ứng bằng nhau:<br>$\\begin{cases} m - 1 = 3 \\\\ 5 = 2n + 1 \\end{cases} \\Leftrightarrow \\begin{cases} m = 4 \\\\ 2n = 4 \\end{cases} \\Leftrightarrow \\begin{cases} m = 4 \\\\ n = 2 \\end{cases}$<br>Vậy $m = 4$ và $n = 2$."
+}
+            ]
+        },
+        {
+            tenBai: "Bài 2. Biểu thức tọa độ của các phép toán vectơ",
+            danhSachPhan: [
+                {
+  "congThuc": "Cho hai vectơ $\\vec{u} = (x; y)$, $\\vec{v} = (x'; y')$ và các điểm $A(x_A; y_A)$, $B(x_B; y_B)$, $C(x_C; y_C)$:<br><br>Các phép toán vectơ:<br>+) $\\vec{u} + \\vec{v} = (x + x'; y + y')$<br>+) $\\vec{u} - \\vec{v} = (x - x'; y - y')$<br>+) $k\\vec{u} = (kx; ky) \\quad (k \\in \\mathbb{R})$<br><br>Độ dài và khoảng cách:<br>+) Tọa độ vectơ: $\\overrightarrow{AB} = (x_B - x_A; y_B - y_A)$<br>+) Độ dài vectơ: $|\\vec{u}| = \\sqrt{x^2 + y^2}$<br>+) Khoảng cách giữa 2 điểm: $AB = \\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}$<br><br>Tọa độ các điểm đặc biệt:<br>+) Trung điểm $M$ của $AB$: $M\\left(\\frac{x_A + x_B}{2}; \\frac{y_A + y_B}{2}\\right)$<br>+) Trọng tâm $G$ của $\\triangle ABC$: $G\\left(\\frac{x_A + x_B + x_C}{3}; \\frac{y_A + y_B + y_C}{3}\\right)$",
+  "tinhChat": "Điều kiện cùng phương: $\\vec{v}(x'; y')$ cùng phương với $\\vec{u}(x; y) \\neq \\vec{0}$ khi và chỉ khi có số $k$ sao cho $x' = kx$ và $y' = ky$. Nếu $xy \\neq 0$, ta xét tỉ số: $\\frac{x'}{x} = \\frac{y'}{y}$.<br><br>Ứng dụng: Ba điểm $A, B, C$ thẳng hàng khi và chỉ khi $\\overrightarrow{AB}$ và $\\overrightarrow{BC}$ cùng phương.",
+  "meoNho": "+) Quy tắc tính toán: Phép cộng, trừ, nhân số thực thực hiện theo từng vế độc lập (hoành theo hoành, tung theo tung).<br>+) Tìm tọa độ vectơ $\\overrightarrow{AB}$: Luôn lấy tọa độ điểm **sau** (ngọn $B$) trừ đi tọa độ điểm **trước** (gốc $A$). Tránh nhầm lẫn lấy ngược lại.",
+  "deBaiViDu": "Trong mặt phẳng $Oxy$, cho ba điểm $A(1; -2)$, $B(3; 2)$, $C(7; 4)$.<br>1) Tìm tọa độ $\\overrightarrow{AB}, \\overrightarrow{BC}$ và so sánh khoảng cách $AB, BC$.<br>2) Ba điểm $A, B, C$ có thẳng hàng không? Tìm tọa độ trọng tâm $G$ của tam giác $ABC$.",
+  "loiGiaiViDu": "+) Câu 1:<br>$\\overrightarrow{AB} = (3 - 1; 2 - (-2)) = (2; 4) \\Rightarrow AB = \\sqrt{2^2 + 4^2} = \\sqrt{20} = 2\\sqrt{5}$.<br>$\\overrightarrow{BC} = (7 - 3; 4 - 2) = (4; 2) \\Rightarrow BC = \\sqrt{4^2 + 2^2} = \\sqrt{20} = 2\\sqrt{5}$.<br>Vậy $AB = BC = 2\\sqrt{5}$.<br><br>+) Câu 2:<br>Xét tỉ số hoành độ và tung độ của $\\overrightarrow{AB}(2; 4)$ và $\\overrightarrow{BC}(4; 2)$: $\\frac{2}{4} \\neq \\frac{4}{2}$ nên hai vectơ không cùng phương $\\Rightarrow A, B, C$ không thẳng hàng.<br>Tọa độ trọng tâm $G$ là:<br>$x_G = \\frac{1 + 3 + 7}{3} = \\frac{11}{3}$<br>$y_G = \\frac{-2 + 2 + 4}{3} = \\frac{4}{3}$<br>Vậy $G\\left(\\frac{11}{3}; \\frac{4}{3}\\right)$."
+}
+            ]
+        }
+    ]
+},
+                {
+    tenChuong: "CHƯƠNG XI. TÍCH VÔ HƯỚNG CỦA HAI VECTƠ",
+    baiList: [
+        {
+            tenBai: "Bài 1. Góc giữa hai vectơ",
+            danhSachPhan: [
+               {
+  "khaiNiem": "Cho hai vectơ $\\vec{u}$ và $\\vec{v}$ khác $\\vec{0}$. Từ một điểm $A$ tùy ý, dựng $\\overrightarrow{AB} = \\vec{u}$ và $\\overrightarrow{AC} = \\vec{v}$. Khi đó, số đo của góc $\\widehat{BAC}$ ($0^\\circ \\le \\widehat{BAC} \\le 180^\\circ$) được gọi là góc giữa hai vectơ $\\vec{u}$ và $\\vec{v}$, kí hiệu là $(\\vec{u}, \\vec{v})$.",
+  "tinhChat": "Định nghĩa vuông góc: Nếu $(\\vec{u}, \\vec{v}) = 90^\\circ$ thì hai vectơ $\\vec{u}$ và $\\vec{v}$ vuông góc với nhau, kí hiệu là $\\vec{u} \\perp \\vec{v}$. Khái niệm này cũng được áp dụng cho trường hợp một trong hai vectơ là $\\vec{0}$ (quy ước $\\vec{0}$ vuông góc với mọi vectơ).",
+  "meoNho": "+) Đính chính lỗi gõ trong tài liệu gốc: Đoạn đầu câu chú ý bị khuyết chữ, chính xác theo SGK phải là **\"Vectơ-không ($\\vec{0}$) được coi là vuông góc với mọi vectơ\"** nha bồ.<br>+) Mẹo xác định góc: Hai vectơ bắt buộc phải **chung gốc**. Nếu đề bài cho hai vectơ chưa chung gốc (ví dụ $(\\overrightarrow{AB}, \\overrightarrow{BC})$), ta cần tịnh tiến một vectơ để đưa về dạng chung gốc (tịnh tiến $\\overrightarrow{AB}$ thành $\\overrightarrow{BD}$ để đưa về gốc $B$).<br>+) Công thức tính nhanh khi đổi gốc: $(\\overrightarrow{AB}, \\overrightarrow{BC}) = 180^\\circ - \\widehat{ABC}$ (góc ngoài tại đỉnh chung).",
+  "deBaiViDu": "Cho tam giác $ABC$ vuông tại $A$ có $\\widehat{B} = 30^\\circ$. Tính các góc giữa các cặp vectơ sau:<br>1) $(\\overrightarrow{AB}, \\overrightarrow{AC})$<br>2) $(\\overrightarrow{CA}, \\overrightarrow{CB})$<br>3) $(\\overrightarrow{AB}, \\overrightarrow{BC})$",
+  "loiGiaiViDu": "1) Vì hai vectơ $\\overrightarrow{AB}$ và $\\overrightarrow{AC}$ đã chung gốc $A$ và tam giác $ABC$ vuông tại $A$, nên:<br>$(\\overrightarrow{AB}, \\overrightarrow{AC}) = \\widehat{BAC} = 90^\\circ$.<br><br>2) Vì hai vectơ $\\overrightarrow{CA}$ và $\\overrightarrow{CB}$ đã chung gốc $C$, ta tính góc $\\widehat{ACB}$ dựa vào tổng các góc trong tam giác vuông:<br>$\\widehat{ACB} = 90^\\circ - \\widehat{B} = 90^\\circ - 30^\\circ = 60^\\circ$.<br>Do đó: $(\\overrightarrow{CA}, \\overrightarrow{CB}) = \\widehat{ACB} = 60^\\circ$.<br><br>3) Để tính góc giữa $\\overrightarrow{AB}$ và $\\overrightarrow{BC}$, ta tịnh tiến $\\overrightarrow{AB}$ thành $\\overrightarrow{BD}$ (với $B$ là trung điểm $AD$). Khi đó hai vectơ đưa về chung gốc $B$ là $\\overrightarrow{BD}$ và $\\overrightarrow{BC}$:<br>$(\\overrightarrow{AB}, \\overrightarrow{BC}) = (\\overrightarrow{BD}, \\overrightarrow{BC}) = \\widehat{CBD}$.<br>Vì $\\widehat{ABC}$ và $\\widehat{CBD}$ là hai góc kề bù nên:<br>$\\widehat{CBD} = 180^\\circ - \\widehat{ABC} = 180^\\circ - 30^\\circ = 150^\\circ$.<br>Vậy $(\\overrightarrow{AB}, \\overrightarrow{BC}) = 150^\\circ$."
+}
+            ]
+        },
+        {
+            tenBai: "Bài 2. Tích vô hướng của hai vectơ",
+            danhSachPhan: [
+               {
+  "khaiNiem": "Tích vô hướng của hai vectơ khác vectơ-không $\\vec{u}$ và $\\vec{v}$ là một số (không phải là một vectơ), kí hiệu là $\\vec{u} \\cdot \\vec{v}$.",
+  "congThuc": "Công thức tính tích vô hướng:<br>$$\\vec{u} \\cdot \\vec{v} = |\\vec{u}| \\cdot |\\vec{v}| \\cdot \\cos(\\vec{u}, \\vec{v})$$<br>Bình phương vô hướng: Bình phương vô hướng của một vectơ bằng bình phương độ dài của vectơ đó:<br>$$\\vec{u}^2 = |\\vec{u}|^2$$",
+  "tinhChat": "Điều kiện vuông góc: Hai vectơ khác $\\vec{0}$ vuông góc với nhau khi và chỉ khi tích vô hướng của chúng bằng $0$:<br>$$\\vec{u} \\perp \\vec{v} \\Leftrightarrow \\vec{u} \\cdot \\vec{v} = 0$$",
+  "meoNho": "+) Để tính tích vô hướng theo định nghĩa, bồ cần xác định đủ 3 yếu tố: độ dài vectơ thứ nhất, độ dài vectơ thứ hai, và góc chung gốc giữa hai vectơ đó.<br>+) Nhận biết nhanh: Nếu hai vectơ vuông góc với nhau thì tích vô hướng bằng $0$ luôn, không cần mất công tính độ dài của từng vectơ làm gì cho mệt nha.",
+  "deBaiViDu": "Cho tam giác đều $ABC$ có cạnh bằng $2$ và đường cao $AH$. Tính các tích vô hướng sau:<br>1) $\\overrightarrow{AB} \\cdot \\overrightarrow{AC}$<br>2) $\\overrightarrow{AH} \\cdot \\overrightarrow{BC}$",
+  "loiGiaiViDu": "+) Câu 1: Vì $\\triangle ABC$ đều nên góc $\\widehat{BAC} = 60^\\circ$. Do hai vectơ $\\overrightarrow{AB}$ và $\\overrightarrow{AC}$ đã chung gốc $A$ nên $(\\overrightarrow{AB}, \\overrightarrow{AC}) = 60^\\circ$.<br>Áp dụng công thức:<br>$\\overrightarrow{AB} \\cdot \\overrightarrow{AC} = |\\overrightarrow{AB}| \\cdot |\\overrightarrow{AC}| \\cdot \\cos 60^\\circ = 2 \\cdot 2 \\cdot \\frac{1}{2} = 2$.<br><br>+) Câu 2: Vì $AH$ là đường cao nên $AH \\perp BC$, suy ra hai vectơ $\\overrightarrow{AH}$ và $\\overrightarrow{BC}$ vuông góc với nhau.<br>Do đó, tích vô hướng của chúng bằng $0$:<br>$\\overrightarrow{AH} \\cdot \\overrightarrow{BC} = 0$."
+}
+            ]
+        },
+         {
+            tenBai: "Bài 3. Biểu thức tọa độ và tính chất của tích vô hướng",
+            danhSachPhan: [
+               {
+  "congThuc": "Cho hai vectơ $\\vec{u} = (x; y)$ và $\\vec{v} = (x'; y')$:<br><br>Biểu thức tọa độ của tích vô hướng:<br>$$\\vec{u} \\cdot \\vec{v} = x \\cdot x' + y \\cdot y'$$<br>Bình phương vô hướng:<br>$$\\vec{u}^2 = x^2 + y^2$$<br>Công thức tính góc giữa hai vectơ (với $\\vec{u}, \\vec{v} \\neq \\vec{0}$):<br>$$\\cos(\\vec{u}, \\vec{v}) = \\frac{\\vec{u} \\cdot \\vec{v}}{|\\vec{u}| \\cdot |\\vec{v}|} = \\frac{x \\cdot x' + y \\cdot y'}{\\sqrt{x^2 + y^2} \\cdot \\sqrt{x'^2 + y'^2}}$$",
+  "tinhChat": "Với ba vectơ $\\vec{u}, \\vec{v}, \\vec{w}$ bất kì và mọi số thực $k$:<br>+) Giao hoán: $\\vec{u} \\cdot \\vec{v} = \\vec{v} \\cdot \\vec{u}$<br>+) Phân phối: $\\vec{u} \\cdot (\\vec{v} \\pm \\vec{w}) = \\vec{u} \\cdot \\vec{v} \\pm \\vec{u} \\cdot \\vec{w}$<br>+) Kết hợp số thực: $(k\\vec{u}) \\cdot \\vec{v} = k(\\vec{u} \\cdot \\vec{v}) = \\vec{u} \\cdot (k\\vec{v})$<br>+) Điều kiện vuông góc: $\\vec{u} \\perp \\vec{v} \\Leftrightarrow x \\cdot x' + y \\cdot y' = 0$<br><br>Các hằng đẳng thức vectơ tương tự đại số:<br>+) $(\\vec{u} \\pm \\vec{v})^2 = \\vec{u}^2 \\pm 2\\vec{u}\\vec{v} + \\vec{v}^2$<br>+) $(\\vec{u} + \\vec{v})(\\vec{u} - \\vec{v}) = \\vec{u}^2 - \\vec{v}^2$",
+  "meoNho": "+) Quy tắc tính tích vô hướng bằng tọa độ: Lấy hoành nhân hoành cộng tung nhân tung, kết quả ra một số cụ thể chứ không còn dấu phẩy tọa độ nữa.<br>+) Đối với bài toán chứng minh hệ thức hình học có một điểm $M$ tùy ý và các tích vô hướng đối đuôi vòng quanh, mẹo giải nhanh là biến đổi các vectơ cạnh (như $\\overrightarrow{BC}, \\overrightarrow{CA}, \\overrightarrow{AB}$) thành hiệu của hai vectơ chung gốc $M$ (sử dụng quy tắc hiệu) rồi nhân phân phối ra để triệt tiêu hoàn toàn.",
+  "deBaiViDu": "1) Trong mặt phẳng tọa độ, cho hai vectơ $\\vec{u} = (0; -5)$ và $\\vec{v} = (\\sqrt{3}; 1)$. Tính tích vô hướng $\\vec{u} \\cdot \\vec{v}$ và tìm góc giữa chúng.<br>2) Cho tam giác $ABC$. Chứng minh rằng với điểm $M$ tùy ý ta luôn có hệ thức: $\\overrightarrow{MA} \\cdot \\overrightarrow{BC} + \\overrightarrow{MB} \\cdot \\overrightarrow{CA} + \\overrightarrow{MC} \\cdot \\overrightarrow{AB} = 0$.",
+  "loiGiaiViDu": "+) Câu 1:<br>Tích vô hướng: $\\vec{u} \\cdot \\vec{v} = 0 \\cdot \\sqrt{3} + (-5) \\cdot 1 = -5$.<br>Độ dài từng vectơ: $|\\vec{u}| = \\sqrt{0^2 + (-5)^2} = 5$ và $|\\vec{v}| = \\sqrt{(\\sqrt{3})^2 + 1^2} = 2$.<br>Tính cosin góc giữa hai vectơ:<br>$\\cos(\\vec{u}, \\vec{v}) = \\frac{\\vec{u} \\cdot \\vec{v}}{|\\vec{u}| \\cdot |\\vec{v}|} = \\frac{-5}{5 \\cdot 2} = -\\frac{1}{2} \\Rightarrow (\\vec{u}, \\vec{v}) = 120^\\circ$.<br><br>+) Câu 2: Biến đổi các vectơ cạnh ở vế trái bằng quy tắc hiệu về chung gốc $M$:<br>$\\overrightarrow{MA} \\cdot \\overrightarrow{BC} = \\overrightarrow{MA} \\cdot (\\overrightarrow{MC} - \\overrightarrow{MB}) = \\overrightarrow{MA} \\cdot \\overrightarrow{MC} - \\overrightarrow{MA} \\cdot \\overrightarrow{MB}$<br>$\\overrightarrow{MB} \\cdot \\overrightarrow{CA} = \\overrightarrow{MB} \\cdot (\\overrightarrow{MA} - \\overrightarrow{MC}) = \\overrightarrow{MB} \\cdot \\overrightarrow{MA} - \\overrightarrow{MB} \\cdot \\overrightarrow{MC}$<br>$\\overrightarrow{MC} \\cdot \\overrightarrow{AB} = \\overrightarrow{MC} \\cdot (\\overrightarrow{MB} - \\overrightarrow{MA}) = \\overrightarrow{MC} \\cdot \\overrightarrow{MB} - \\overrightarrow{MC} \\cdot \\overrightarrow{MA}$<br>Cộng vế với vế của ba đẳng thức trên, sử dụng tính chất giao hoán ($\\overrightarrow{MA} \\cdot \\overrightarrow{MB} = \\overrightarrow{MB} \\cdot \\overrightarrow{MA},\\dots$), ta thấy các số hạng triệt tiêu nhau hoàn toàn và bằng $0$. Đẳng thức được chứng minh."
+}
+            ]
+        }
+    ]
 }
              ]
         },
