@@ -683,6 +683,47 @@
             ]
         }
     ]
+},
+                {
+    tenChuong: "CHƯƠNG XII. SỐ GẦN ĐÚNG VÀ SAI SỐ",
+    baiList: [
+        {
+            tenBai: "Bài 1. Số gần đúng",
+            danhSachPhan: [
+               {
+  "khaiNiem": "Trong thực tế, nhiều đại lượng rất khó hoặc không thể xác định được giá trị chính xác tuyệt đối. <br>+) **Số đúng (kí hiệu là $\\bar{a}$):** Là giá trị chính xác tuyệt đối của một đại lượng.<br>+) **Số gần đúng (kí hiệu là $a$):** Là giá trị xấp xỉ, được sử dụng để thay thế cho số đúng trong tính toán hoặc đo đạc thực tế.",
+  "meoNho": "+) Các số biểu diễn dưới dạng căn thức (như $\\sqrt{2}, \\sqrt[3]{3}$) hoặc các hằng số toán học (như $\\pi$) thường là các số đúng. <br>+) Khi chúng ta bấm máy tính cầm tay và làm tròn thành các số thập phân (như $1,41; 3,14; 12,57$), các kết quả đó đều là số gần đúng.<br>+) Dấu hiệu nhận biết nhanh trong bài toán: Các từ như \"xấp xỉ\", \"khoảng\", \"làm tròn thành\" luôn chỉ số gần đúng.",
+  "deBaiViDu": "Một hình tròn có bán kính $R = 2\\text{ cm}$.<br>1) Tính chu vi chính xác của hình tròn.<br>2) Sử dụng máy tính cầm tay để tìm giá trị gần đúng của chu vi đó với hai chữ số thập phân.",
+  "loiGiaiViDu": "1) Chu vi chính xác của hình tròn (số đúng $\\bar{a}$) là:<br>$C = 2 \\cdot \\pi \\cdot R = 2 \\cdot \\pi \\cdot 2 = 4\\pi\\text{ (cm)}$.<br><br>2) Sử dụng máy tính cầm tay, ta có $4\\pi \\approx 12,56637...$<br>Làm tròn đến hai chữ số thập phân, ta được số gần đúng của chu vi hình tròn là:<br>$a = 12,57\\text{ (cm)}$."
+}
+            ]
+        },
+         {
+            tenBai: "Bài 2. Sai số tuyệt đối và sai số tương đối",
+            danhSachPhan: [
+               {
+  "khaiNiem": "' **Sai số tuyệt đối:** Kí hiệu là $\\Delta_a$, là đại lượng phản ánh mức độ sai lệch giữa số đúng $\\bar{a}$ và số gần đúng $a$. Công thức: $\\Delta_a = |a - \\bar{a}|$.<br>' **Độ chính xác:** Kí hiệu là $d$. Trong thực tế khi không biết $\\bar{a}$, ta tìm một số $d$ sao cho $\\Delta_a \\le d$. Khi đó, số đúng nằm trong đoạn $[a - d; a + d]$ và ta viết là $\\bar{a} = a \\pm d$.<br>' **Sai số tương đối:** Kí hiệu là $\\delta_a$, là tỉ số giữa sai số tuyệt đối (hoặc độ chính xác $d$) và giá trị tuyệt đối của số gần đúng $a$. Công thức: $\\delta_a = \\frac{\\Delta_a}{|a|} \\le \\frac{d}{|a|}$ (thường viết dưới dạng phần trăm).",
+  "tinhChat": "' Trong các phép đo vật lí, độ chính xác $d$ thường được quy ước bằng một nửa đơn vị nhỏ nhất của thang đo trên thước.<br>' Sai số tương đối $\\delta_a$ càng nhỏ thì chất lượng của phép đo hoặc phép tính toán đó càng cao (chính xác hơn), không phụ thuộc vào kích thước lớn hay nhỏ của vật đo.",
+  "meoNho": "+) Các công thức tính sai số phải đặt trong dấu giá trị tuyệt đối để đảm bảo sai số luôn là một số dương, cụ thể là $\\Delta_a = |a - \\bar{a}|$ và $\\delta_a = \\frac{\\Delta_a}{|a|}$.<br>+) Mẹo phân biệt: Sai số tuyệt đối cho biết số đo lệch khoảng bao nhiêu đơn vị cụ thể (g, ml, cm...); còn sai số tương đối dùng để so sánh xem phép đo nào chất lượng và uy tín hơn (tính bằng %).",
+  "deBaiViDu": "Trong một cửa hàng, hai sản phẩm có thông số kỹ thuật như sau:<br>Chai 1: Thể tích $500\\text{ ml} \\pm 3\\text{ ml}$<br>Chai 2: Thể tích $1000\\text{ ml} \\pm 8\\text{ ml}$<br>Dựa vào sai số tương đối, hãy cho biết chai nào có phép đo thể tích chính xác hơn?",
+  "loiGiaiViDu": "+) Đối với Chai 1: Giá trị gần đúng $a_1 = 500$, độ chính xác $d_1 = 3$.<br>Sai số tương đối tối đa của Chai 1 là:<br>$$\\delta_1 \\le \\frac{d_1}{|a_1|} = \\frac{3}{500} = 0,6\\%$$<br>+) Đối với Chai 2: Giá trị gần đúng $a_2 = 1000$, độ chính xác $d_2 = 8$.<br>Sai số tương đối tối đa của Chai 2 là:<br>$$\\delta_2 \\le \\frac{d_2}{|a_2|} = \\frac{8}{1000} = 0,8\\%$$<br>+) So sánh: Vì $0,6\\% < 0,8\\%$, suy ra $\\delta_1 < \\delta_2$.<br>Vậy Chai 1 ghi thể tích thực chính xác hơn Chai 2."
+}
+            ]
+        },
+        {
+            tenBai: "Bài 3. Quy tròn số gần đúng",
+            danhSachPhan: [
+              {
+  "khaiNiem": "Số quy tròn là số thu được sau khi thực hiện các quy tắc làm tròn số. Số quy tròn chính là một số gần đúng của số ban đầu.",
+  "congThuc": "Quy tắc làm tròn số:<br>+) Đối với chữ số hàng làm tròn: Giữ nguyên nếu chữ số ngay bên phải nó nhỏ hơn 5; tăng thêm 1 đơn vị nếu chữ số ngay bên phải nó lớn hơn hoặc bằng 5.<br>+) Đối với các chữ số sau hàng làm tròn: Bỏ đi nếu ở phần thập phân; thay bằng các chữ số 0 nếu ở phần số nguyên.",
+  "tinhChat": "Khi thay số đúng bằng số quy tròn đến một hàng nào đó, sai số tuyệt đối của số quy tròn không vượt quá nửa đơn vị của hàng làm tròn.<br><br>Định hướng hàng làm tròn theo độ chính xác $d$: Khi bỏ ngỏ hàng làm tròn, ta làm tròn số gần đúng $a$ đến hàng thấp nhất mà độ chính xác $d$ nhỏ hơn 1 đơn vị của hàng đó (hàng làm tròn là hàng đứng ngay trước hàng chứa chữ số đầu tiên bên trái của $d$).",
+  "meoNho": "+) Đính chính lỗi dùng từ của tài liệu gốc: Ở câu (b) dòng hướng dẫn giải, cụm từ \"hàng phần chục\" chưa chuẩn xác theo thuật ngữ toán học, chính xác phải gọi là **\"hàng phần mười\"** bạn nhé.<br>+) Mẹo xác định hàng làm tròn dựa vào $d$: Nhìn xem số $d$ có chữ số khác 0 đầu tiên ở hàng nào, ta sẽ chọn hàng làm tròn lớn hơn hàng đó 1 bậc. Ví dụ: $d = 10$ (hàng chục) $\\rightarrow$ làm tròn đến hàng trăm; $d = 0,02$ (hàng phần trăm) $\\rightarrow$ làm tròn đến hàng phần mười.",
+  "deBaiViDu": "1) Làm tròn số 5437,56 đến hàng trăm và số 22,758 đến hàng phần mười.<br>2) Cho số gần đúng $a = 213666$ với độ chính xác $d = 10$. Hãy viết số quy tròn của số $a$.",
+  "loiGiaiViDu": "+) Câu 1:<br>- Số 5437,56 làm tròn đến hàng trăm: Chữ số hàng làm tròn là 4, chữ số ngay bên phải là 3 (nhỏ hơn 5). Vì ở phần số nguyên nên các chữ số sau hàng trăm thay bằng số 0, phần thập phân bỏ đi. Kết quả thu được số quy tròn là 5400.<br>- Số 22,758 làm tròn đến hàng phần mười: Chữ số hàng làm tròn là 7, chữ số ngay bên phải là 5 (bằng 5) nên tăng 7 thêm 1 đơn vị thành 8. Phần thập phân sau đó bỏ đi. Kết quả thu được số quy tròn là 22,8.<br><br>+) Câu 2:<br>Vì độ chính xác $d = 10$ nằm ở hàng chục, nên theo quy tắc ta phải làm tròn số $a$ đến hàng lớn hơn kế tiếp là hàng trăm. Chữ số hàng trăm của $a = 213666$ là 6, chữ số bên phải nó cũng là 6 (lớn hơn 5) nên tăng lên thành 7, các chữ số sau đó thay bằng số 0. Vậy số quy tròn của $a$ là 213700."
+}
+            ]
+        }
+    ]
 }
              ]
         },
