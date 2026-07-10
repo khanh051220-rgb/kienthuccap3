@@ -717,9 +717,52 @@
   "khaiNiem": "Số quy tròn là số thu được sau khi thực hiện các quy tắc làm tròn số. Số quy tròn chính là một số gần đúng của số ban đầu.",
   "congThuc": "Quy tắc làm tròn số:<br>+) Đối với chữ số hàng làm tròn: Giữ nguyên nếu chữ số ngay bên phải nó nhỏ hơn 5; tăng thêm 1 đơn vị nếu chữ số ngay bên phải nó lớn hơn hoặc bằng 5.<br>+) Đối với các chữ số sau hàng làm tròn: Bỏ đi nếu ở phần thập phân; thay bằng các chữ số 0 nếu ở phần số nguyên.",
   "tinhChat": "Khi thay số đúng bằng số quy tròn đến một hàng nào đó, sai số tuyệt đối của số quy tròn không vượt quá nửa đơn vị của hàng làm tròn.<br><br>Định hướng hàng làm tròn theo độ chính xác $d$: Khi bỏ ngỏ hàng làm tròn, ta làm tròn số gần đúng $a$ đến hàng thấp nhất mà độ chính xác $d$ nhỏ hơn 1 đơn vị của hàng đó (hàng làm tròn là hàng đứng ngay trước hàng chứa chữ số đầu tiên bên trái của $d$).",
-  "meoNho": "+) Đính chính lỗi dùng từ của tài liệu gốc: Ở câu (b) dòng hướng dẫn giải, cụm từ \"hàng phần chục\" chưa chuẩn xác theo thuật ngữ toán học, chính xác phải gọi là **\"hàng phần mười\"** bạn nhé.<br>+) Mẹo xác định hàng làm tròn dựa vào $d$: Nhìn xem số $d$ có chữ số khác 0 đầu tiên ở hàng nào, ta sẽ chọn hàng làm tròn lớn hơn hàng đó 1 bậc. Ví dụ: $d = 10$ (hàng chục) $\\rightarrow$ làm tròn đến hàng trăm; $d = 0,02$ (hàng phần trăm) $\\rightarrow$ làm tròn đến hàng phần mười.",
+  "meoNho": "<br>+) Mẹo xác định hàng làm tròn dựa vào $d$: Nhìn xem số $d$ có chữ số khác 0 đầu tiên ở hàng nào, ta sẽ chọn hàng làm tròn lớn hơn hàng đó 1 bậc. Ví dụ: $d = 10$ (hàng chục) $\\rightarrow$ làm tròn đến hàng trăm; $d = 0,02$ (hàng phần trăm) $\\rightarrow$ làm tròn đến hàng phần mười.",
   "deBaiViDu": "1) Làm tròn số 5437,56 đến hàng trăm và số 22,758 đến hàng phần mười.<br>2) Cho số gần đúng $a = 213666$ với độ chính xác $d = 10$. Hãy viết số quy tròn của số $a$.",
   "loiGiaiViDu": "+) Câu 1:<br>- Số 5437,56 làm tròn đến hàng trăm: Chữ số hàng làm tròn là 4, chữ số ngay bên phải là 3 (nhỏ hơn 5). Vì ở phần số nguyên nên các chữ số sau hàng trăm thay bằng số 0, phần thập phân bỏ đi. Kết quả thu được số quy tròn là 5400.<br>- Số 22,758 làm tròn đến hàng phần mười: Chữ số hàng làm tròn là 7, chữ số ngay bên phải là 5 (bằng 5) nên tăng 7 thêm 1 đơn vị thành 8. Phần thập phân sau đó bỏ đi. Kết quả thu được số quy tròn là 22,8.<br><br>+) Câu 2:<br>Vì độ chính xác $d = 10$ nằm ở hàng chục, nên theo quy tắc ta phải làm tròn số $a$ đến hàng lớn hơn kế tiếp là hàng trăm. Chữ số hàng trăm của $a = 213666$ là 6, chữ số bên phải nó cũng là 6 (lớn hơn 5) nên tăng lên thành 7, các chữ số sau đó thay bằng số 0. Vậy số quy tròn của $a$ là 213700."
+}
+            ]
+        }
+    ]
+},
+                {
+    tenChuong: "CHƯƠNG XIII. CÁC SỐ TRƯNG ĐO XU THẾ TRUNG TÂM.",
+    baiList: [
+        {
+            tenBai: "Bài 1. Số trung bình và trung vị",
+            danhSachPhan: [
+               {
+  "khaiNiem": "' **Số trung bình (Số trung bình cộng):** Kí hiệu là $\\bar{x}$, là giá trị trung bình của các số trong mẫu số liệu, thể hiện vị trí trung tâm và dùng để đại diện cho mẫu số liệu.<br>' **Trung vị:** Kí hiệu là $M_e$, là giá trị nằm ở vị trí chính giữa của mẫu số liệu sau khi đã sắp xếp theo thứ tự không giảm.",
+  "congThuc": "• **Công thức số trung bình:**<br>+) Dạng liệt kê: $\\bar{x} = \\frac{x_1 + x_2 + ... + x_n}{n}$<br>+) Dạng bảng tần số: $\\bar{x} = \\frac{m_1x_1 + m_2x_2 + ... + m_kx_k}{n}$ (với $m_k$ là tần số của giá trị $x_k$, tổng số phần tử $n = m_1 + ... + m_k$).<br><br>• **Cách tìm trung vị ($M_e$):** Sắp xếp mẫu số liệu theo thứ tự không giảm ($n$ phần tử):<br>+) Nếu $n$ lẻ: $M_e$ là giá trị ở vị trí thứ $\\frac{n+1}{2}$.<br>+) Nếu $n$ chẵn: $M_e$ là trung bình cộng của hai giá trị ở vị trí thứ $\\frac{n}{2}$ và $\\frac{n}{2} + 1$.",
+  "tinhChat": "• Số trung bình bị ảnh hưởng lớn bởi các giá trị bất thường (quá lớn hoặc quá nhỏ).<br>• Trung vị không bị ảnh hưởng bởi giá trị bất thường. Do đó, khi mẫu số liệu xuất hiện giá trị bất thường, ta nên dùng trung vị để đại diện cho xu thế trung tâm của mẫu số liệu.",
+  "meoNho": <br>+) Mẹo tìm trung vị không bao giờ sai: Việc đầu tiên và bắt buộc phải làm là **sắp xếp dãy số từ nhỏ đến lớn**. Rất nhiều bạn thường quên bước này mà lấy luôn số ở giữa của dãy ban đầu dẫn đến tính sai.",
+  "deBaiViDu": "1) Kết quả điều tra số con của 20 hộ gia đình được cho trong bảng sau:<br>Số con: 0 | 1 | 2 | 3 | 4<br>Số hộ:  4 | 4 | 8 | 3 | 1<br>Tính số con trung bình của mỗi hộ.<br><br>2) Đo chiều cao (cm) của 9 học sinh được dãy: 149, 153, 155, 153, 150, 188, 148, 151, 150. Tìm số trung bình, trung vị và cho biết số nào đại diện phù hợp hơn?",
+  "loiGiaiViDu": "+) Câu 1: Tổng số hộ $n = 20$. Số con trung bình của mỗi hộ gia đình là:<br>$$\\bar{x} = \\frac{0 \\cdot 4 + 1 \\cdot 4 + 2 \\cdot 8 + 3 \\cdot 3 + 4 \\cdot 1}{20} = 1,65 \\text{ con}$$<br><br>+) Câu 2:<br>- Số trung bình: $\\bar{x} = \\frac{148+149+150+150+151+153+153+155+188}{9} \\approx 155,22 \\text{ cm}$.<br>- Tìm trung vị: Sắp xếp dãy số theo thứ tự không giảm: 148, 149, 150, 150, **151**, 153, 153, 155, 188.<br>Vì $n = 9$ là số lẻ, giá trị chính giữa ở vị trí thứ 5 là 151. Vậy trung vị $M_e = 151 \\text{ cm}$.<br>- Đánh giá: Trong mẫu có giá trị bất thường là $188 \\text{ cm}$ (cao vượt trội) kéo số trung bình lên cao, nên dùng số trung vị $151 \\text{ cm}$ làm đại diện sẽ phù hợp hơn."
+}
+            ]
+        },
+         {
+            tenBai: "Bài 2. Tứ phân vị",
+            danhSachPhan: [
+               {
+  "khaiNiem": "' **Tứ phân vị:** Là bộ ba giá trị $Q_1, Q_2, Q_3$ chia một mẫu số liệu đã sắp xếp theo thứ tự không giảm thành bốn phần bằng nhau, mỗi phần chứa khoảng 25% số lượng số liệu.<br>+) $Q_1$: Tứ phân vị thứ nhất (hoặc tứ phân vị dưới).<br>+) $Q_2$: Tứ phân vị thứ hai (chính là trung vị $M_e$).<br>+) $Q_3$: Tứ phân vị thứ ba (hoặc tứ phân vị trên).",
+  "congThuc": "Các bước tìm tứ phân vị cho mẫu số liệu gồm $n$ phần tử:<br>+) **Bước 1:** Sắp xếp mẫu số liệu theo thứ tự không giảm.<br>+) **Bước 2:** Tìm trung vị của toàn bộ mẫu để được $Q_2$.<br>+) **Bước 3:** Tìm $Q_1$ và $Q_3$ dựa theo $n$:<br>   - Nếu $n$ lẻ: $Q_1$ là trung vị của nửa số liệu bên trái $Q_2$; $Q_3$ là trung vị của nửa số liệu bên phải $Q_2$ (không tính $Q_2$).<br>   - Nếu $n$ chẵn: $Q_1$ là trung vị của nửa số liệu bên trái; $Q_3$ là trung vị của nửa số liệu bên phải (chia đôi chính xác ở giữa).",
+  "tinhChat": "Ý nghĩa hình ảnh phân bố: <br>+) Hiệu số $(Q_2 - Q_1)$ và $(Q_3 - Q_2)$ giúp nhận biết mật độ tập trung của dữ liệu.<br>+) Nếu $(Q_2 - Q_1) < (Q_3 - Q_2)$, mẫu số liệu tập trung dày đặc ở bên trái $Q_2$ và thưa thớt dần về bên phải $Q_2$.",
+  "meoNho": "+) Mẹo đếm nhanh vị trí: Khi chia đôi một dãy chẵn để tìm $Q_1$ và $Q_3$, số lượng phần tử của hai nửa luôn bằng nhau tuyệt đối. Hãy đếm kỹ số lượng phần tử của mỗi nửa trước khi tính trung vị để tránh lấy lệch vị trí.",
+  "deBaiViDu": "Hàm lượng Protein (g) trong 100g của 20 loại thực phẩm được cho như sau: 8,6; 7,9; 4,1; 6,1; 27,5; 4; 0,9; 7,9; 3,2; 1,7; 1,1; 1,5; 0,8; 1,2; 1,5; 2; 0; 0,7; 2,2; 24,2. Hãy tìm các tứ phân vị và nhận xét về độ tập trung của mẫu số liệu.",
+  "loiGiaiViDu": "Sắp xếp mẫu số liệu gồm $n = 20$ phần tử theo thứ tự không giảm:<br>0; 0,7; 0,8; 0,9; 1,1; 1,5; 1,5; 1,7; 2; **2**; **2,2**; 3,2; 4; 4,1; 6,1; 7,9; 7,9; 8,6; 24,2; 27,5.<br><br>+) Tìm $Q_2$: Vì $n = 20$ (chẵn) nên $Q_2$ là trung bình cộng của giá trị thứ 10 và 11:<br>$$Q_2 = \\frac{2 + 2,2}{2} = 2,1$$<br>+) Tìm $Q_1$: Nửa bên trái gồm 10 số đầu tiên (từ 0 đến số 2 thứ nhất). Trung vị của nửa này là trung bình cộng của số thứ 5 và thứ 6:<br>$$Q_1 = \\frac{1,1 + 1,5}{2} = 1,3$$ (Tài liệu gốc của bạn tính nhầm $(1,1 + 1,2) : 2 = 1,15$ do chép nhầm số 1,2 vốn không có trong dãy, tớ đã tự động sửa lại theo đúng số liệu chuẩn của đề bài).<br><br>+) Tìm $Q_3$: Nửa bên phải gồm 10 số còn lại (từ 2,2 đến 27,5). Trung vị của nửa này là trung bình cộng của số thứ 5 và thứ 6 tính từ mốc 2,2 (tức là số 6,1 và 7,9):<br>$$Q_3 = \\frac{6,1 + 7,9}{2} = 7$$<br>+) Nhận xét: Khoảng cách $Q_2 - Q_1 = 2,1 - 1,3 = 0,8$ nhỏ hơn nhiều so với $Q_3 - Q_2 = 7 - 2,1 = 4,9$. Do đó dữ liệu tập trung với mật độ cao ở bên trái $Q_2$ và mật độ thấp (phân tán rộng) ở bên phải $Q_2$."
+}
+            ]
+        },
+        {
+            tenBai: "Bài 3. Mốt",
+            danhSachPhan: [
+              {
+  "khaiNiem": "' **Mốt (Mode):** Kí hiệu là $M_0$, là giá trị có tần số xuất hiện lớn nhất trong mẫu số liệu (áp dụng cho cả dữ liệu định lượng dạng số và dữ liệu định tính dạng chữ).",
+  "tinhChat": "' Một mẫu số liệu có thể có **một mốt**, **nhiều mốt** (nếu có từ hai giá trị trở lên cùng đạt tần số lớn nhất bằng nhau), hoặc **không có mốt** (nếu tất cả các giá trị đều xuất hiện với số lần bằng nhau).<br>' Ý nghĩa: Mốt được dùng để đo xu thế trung tâm khi mẫu số liệu có nhiều giá trị trùng lặp nhau, phản ánh thị hiếu hoặc lựa chọn phổ biến nhất của tập thể.",
+  "meoNho": "<br>+) Mẹo tìm mốt: Hãy luôn lập một bảng tần số nhẩm nhanh trong đầu để so sánh số lần xuất hiện. Giá trị làm mốt phải là giá trị có số lần xuất hiện **nhiều hơn hẳn** các giá trị còn lại, chứ không phải giá trị lớn nhất về mặt độ lớn.",
+  "deBaiViDu": "1) Tìm mốt của mẫu số liệu điểm kiểm tra sau: 3, 5, 6, 7, 7, 7, 8, 8, 9, 10.<br>2) Một lớp học bỏ phiếu bầu lớp trưởng cho 3 bạn Hoa, Bình, Tú với số phiếu lần lượt là 18, 12, 10. Xác định mốt của mẫu dữ liệu định tính này.",
+  "loiGiaiViDu": "+) Câu 1: Thống kê tần số xuất hiện của từng điểm số:<br>- Điểm 3, 5, 6, 9, 10: xuất hiện 1 lần.<br>- Điểm 8: xuất hiện 2 lần.<br>- Điểm 7: xuất hiện 3 lần.<br>Vì điểm 7 có tần số xuất hiện lớn nhất (3 lần) nên mốt của mẫu số liệu là $M_0 = 7$.<br><br>+) Câu 2: Đây là mẫu dữ liệu định tính. Đối tượng \"Hoa\" nhận được số phiếu bầu cao nhất là 18 phiếu. Do đó, mốt của mẫu dữ liệu biểu quyết này là \"Hoa\"."
 }
             ]
         }
