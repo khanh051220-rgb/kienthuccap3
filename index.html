@@ -6,6 +6,49 @@
     <title>Study With Me</title>
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/188/188333.png">
     <style>
+        /* Lớp nền mờ bao phủ toàn màn hình */
+  #nen-thong-bao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Màu đen mờ */
+    display: none; /* Mặc định giấu đi */
+    justify-content: center; /* Căn giữa chiều ngang */
+    align-items: center; /* Căn giữa chiều dọc */
+    z-index: 9999; /* Ưu tiên nổi lên trên cùng */
+  }
+
+  /* Cái hộp thông báo màu trắng */
+  .hop-thong-bao {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 40px 30px; /* Tăng số này lên để hộp to hơn nữa */
+    border-radius: 12px; /* Bo góc cho tròn mượt */
+    text-align: center;
+    position: relative;
+    width: 80%;
+    max-width: 500px; /* Chiều rộng tối đa của hộp */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+  }
+
+  /* Nút X ở góc phải */
+  #nut-tat-x {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+  }
+
+  /* Di chuột vào nút X sẽ chuyển màu đỏ */
+  #nut-tat-x:hover {
+    color: red;
+  }
         /* ================== CSS CHO NÚT LỜI GIẢI ĐÓNG MỞ ================== */
         .nut-xem-loi-giai {
             background: none; border: none; color: #2d6a4f; padding: 0;
@@ -96,6 +139,20 @@
 </script>
 </head>
 <body>
+    <div id="nen-thong-bao">
+  <div class="hop-thong-bao">
+    <!-- Đây là nút X -->
+    <span id="nut-tat-x">&times;</span>
+    
+    <!-- Tiêu đề thông báo -->
+    <h2>THÔNG BÁO QUAN TRỌNG</h2>
+    
+    <!-- Nội dung thông báo -->
+    <p style="font-size: 18px; line-height: 1.6;">
+      Chào cậu! Chúc cậu một ngày vui vẻ. Sửa nội dung của cậu ở đây nhé, viết dài hay ngắn đều được!
+    </p>
+  </div>
+</div>
 
     <div class="container">
         <h1>🌿 CÂY KIẾN THỨC HỌC TẬP 🌿</h1>
@@ -1336,7 +1393,19 @@ document.getElementById('popup-chung').style.display = 'flex';
     function dongPopup() {
         document.getElementById('popup-chung').style.display = 'none';
     }
+    window.onload = function() {
+    // Lấy các phần tử ra
+    var nenThongBao = document.getElementById("nen-thong-bao");
+    var nutTat = document.getElementById("nut-tat-x");
+
+    // Lệnh 1: Hiển thị thông báo ngay khi trang tải xong
+    nenThongBao.style.display = "flex";
+
+    // Lệnh 2: Khi click vào nút X thì tắt thông báo đi
+    nutTat.onclick = function() {
+      nenThongBao.style.display = "none";
+    };
+  };
 </script>
-    
 </body>
 </html>
